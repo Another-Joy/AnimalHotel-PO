@@ -1,6 +1,7 @@
 package hva.app.animal;
 
 import hva.core.Hotel;
+import hva.app.exception.DuplicateAnimalKeyException;
 import hva.app.exception.UnknownHabitatKeyException;
 import pt.tecnico.uilib.forms.Form;
 import pt.tecnico.uilib.menus.Command;
