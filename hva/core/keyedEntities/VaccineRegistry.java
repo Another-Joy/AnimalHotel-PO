@@ -1,5 +1,7 @@
 package hva.core.keyedEntities;
 
+import hva.core.keyedEntities.employees.Vet;
+
 public class VaccineRegistry {
     private Vaccine _vaccine;
     private Species _species;
