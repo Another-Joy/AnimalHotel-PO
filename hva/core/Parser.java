@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.ArrayList;
 
 import hva.core.exception.UnrecognizedEntryException;
+import hva.core.keyedEntities.Habitat;
 
 // FIXME add other imports if needed
 
@@ -39,7 +40,7 @@ public class Parser {
   }
 
   public void parseFile(String filename) throws IOException, UnrecognizedEntryException {
-    try (BufferedReader reader = new BufferedReader(FileReader(filename))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
       String line;
 
       while ((line = reader.readLine()) != null)
@@ -107,7 +108,7 @@ public class Parser {
   }
 
   // Parse a line with format VACINA|id|nome|idEspécie1,...,idEspécieN
-  private void parseVaccine(String[] components, String empType) {
+  private void parseVaccine(String[] components) {
     try {
       String id = components[1];
       String name = components[2];
@@ -119,7 +120,7 @@ public class Parser {
   }
 
   // Parse a line with format ÁRVORE|id|nome|idade|dificuldade|tipo
-  private void parseTree(String[] components, String line) throws UnrecognizedEntryException {
+  private void parseTree(String[] components) throws UnrecognizedEntryException {
     try {
       String id = components[1];
       String name = components[2];
@@ -134,7 +135,7 @@ public class Parser {
   }
 
   // Parse a line with format HABITAT|id|nome|área|idÁrvore1,...,idÁrvoreN
-  private void parseHabitat(String[] components, String line) throws UnrecognizedEntryException {
+  private void parseHabitat(String[] components) throws UnrecognizedEntryException {
     try {
       String id = components[1];
       String name = components[2];
