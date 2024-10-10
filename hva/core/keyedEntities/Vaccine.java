@@ -10,4 +10,8 @@ public class Vaccine extends KeyedEntity{
         _species = species;
         _registry = new ArrayList<VaccineRegistry>();
     }
+
+    public String toString() {
+        return ("VACINA|" + super.toString() + "|" + _registry.size() + "|" + printSpecies());
+    }
 }

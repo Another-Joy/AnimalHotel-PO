@@ -8,4 +8,8 @@ public class Species extends KeyedEntity {
         super(key, name);
         _animals = new ArrayList<Animal>();
     }
+
+    public String toString(){
+        return ("ESPÉCIE|" + super.toString());
+    }
 }
