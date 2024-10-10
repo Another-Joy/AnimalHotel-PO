@@ -14,7 +14,8 @@ class DoShowAllAnimals extends Command<Hotel> {
   }
   
   @Override
-  protected final void execute() {
+  protected final void execute() throws Com {
     //FIXME implement command
+    _receiver.show("Animals");
   }
 }
