@@ -16,4 +16,8 @@ public abstract class KeyedEntity {
     public String getName(){
         return _name;
     }
+
+    public String toString(){
+        return (_key + "|" + _name);
+    }
 }
