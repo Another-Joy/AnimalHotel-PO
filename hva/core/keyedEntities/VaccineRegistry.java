@@ -1,8 +1,10 @@
 package hva.core.keyedEntities;
 
+import java.io.Serializable;
+
 import hva.core.keyedEntities.employees.Vet;
 
-public class VaccineRegistry {
+public class VaccineRegistry implements Serializable{
     private Vaccine _vaccine;
     private Species _species;
     private Vet _vet;

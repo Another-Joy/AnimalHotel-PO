@@ -22,6 +22,7 @@ public class HotelManager {
    **/
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
     // FIXME implement serialization method
+    // saveAS("hotel");
   }
   
   /**
@@ -35,6 +36,21 @@ public class HotelManager {
    **/
   public void saveAs(String filename) throws FileNotFoundException, MissingFileAssociationException, IOException {
     // FIXME implement serialization method
+    
+    try {
+      // Create a file to save the serialized object
+      FileOutputStream fileOut = new FileOutputStream(filename + ".ser");
+      ObjectOutputStream out = new ObjectOutputStream(fileOut);
+
+      // Serialize the object
+      out.writeObject(_hotel);
+      out.close();
+      fileOut.close();
+
+      // System.out.println("Serialized data is saved in person.ser");
+  } catch (IOException i) {
+      i.printStackTrace();
+  }
   }
   
   /**
@@ -45,6 +61,22 @@ public class HotelManager {
    **/
   public void load(String filename) throws UnavailableFileException {
     // FIXME implement serialization method
+    try {
+      // Read the serialized object from the file
+      FileInputStream fileIn = new FileInputStream(filename + ".ser");
+      ObjectInputStream in = new ObjectInputStream(fileIn);
+
+      // Deserialize the object
+      _hotel = (Hotel) in.readObject();
+      in.close();
+      fileIn.close();
+
+      // System.out.println("Deserialized Person: " + person);
+  } catch (FileNotFoundException f) {
+      f.printStackTrace();
+  } catch (IOException i) {
+      i.printStackTrace();
+  }
   }
   
   /**

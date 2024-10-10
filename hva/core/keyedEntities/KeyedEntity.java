@@ -1,6 +1,8 @@
 package hva.core.keyedEntities;
 
-public abstract class KeyedEntity {
+import java.io.Serializable;
+
+public abstract class KeyedEntity implements Serializable{
     private final String _key;
     private final String _name;
 
