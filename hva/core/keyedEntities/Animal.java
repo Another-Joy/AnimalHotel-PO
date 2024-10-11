@@ -5,7 +5,7 @@ public class Animal extends KeyedEntity{
     private ArrayList<String> _healthState;
     private ArrayList<VaccineRegistry> _vaccines;
     private Habitat _habitat;
-    private Species _species;
+    private Species _species; //Achas que em vez de uma especie pode levar um speciesID?
 
     public Animal(String key, String name, Species species){
         super(key, name);

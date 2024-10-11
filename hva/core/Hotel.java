@@ -2,8 +2,9 @@ package hva.core;
 
 import hva.core.enums.Season;
 import hva.core.exception.*;
-import hva.core.keyedEntities.Animal;
-import hva.core.keyedEntities.Habitat;
+import hva.core.keyedEntities.*;
+import hva.core.keyedEntities.employees.*;
+import hva.core.keyedEntities.trees.*;
 
 import java.io.*;
 import java.util.*;
@@ -38,18 +39,26 @@ public class Hotel implements Serializable {
   }
 
   public void registerAnimal(String id, String name, String habitatId, String speciesId) {
-      // TODO Auto-generated method stub
-    
-      throw new UnsupportedOperationException("Unimplemented method 'registerAnimal'");
+    // TODO Auto-generated method stub
+    /* try {
+      _species.contains(speciesId);
+    } catch{pass}
+     */
+    Animal a = new Animal(); 
+    _animals.add(a);
+      // throw new UnsupportedOperationException("Unimplemented method 'registerAnimal'");
   }
 
   public void registerSpecies(String id, String name) {
       // TODO Auto-generated method stub
+    Species s = new Species(id, name);
+    _species.add(s);
       throw new UnsupportedOperationException("Unimplemented method 'registerSpecies'");
   }
 
   public void registerEmployee(String id, String name, String empType) {
       // TODO Auto-generated method stub
+    
       throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
   }
 
@@ -60,6 +69,8 @@ public class Hotel implements Serializable {
 
   public Habitat registerHabitat(String id, String name, int area) {
       // TODO Auto-generated method stub
+      Habitat h = new Habitat(id, name, area);
+      _habitats.add(h);
       throw new UnsupportedOperationException("Unimplemented method 'registerHabitat'");
   }
 }
