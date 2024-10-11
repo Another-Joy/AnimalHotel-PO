@@ -25,4 +25,9 @@ public class Habitat extends KeyedEntity {
         return ("HABITAT|" + super.toString() + "|" + _area + "|" + _trees.size());
     }
 
+
+    public void addTree(Tree t) {
+        _trees.add(t);
+    }
+
 }
