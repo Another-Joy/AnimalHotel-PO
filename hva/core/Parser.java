@@ -8,6 +8,10 @@ import java.io.Reader;
 import java.util.Collection;
 import java.util.ArrayList;
 
+import hva.app.exception.DuplicateAnimalKeyException;
+import hva.app.exception.UnknownAnimalKeyException;
+import hva.app.exception.UnknownHabitatKeyException;
+import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.exception.UnrecognizedEntryException;
 import hva.core.keyedEntities.Habitat;
 
@@ -72,8 +76,8 @@ public class Parser {
       String speciesId = components[3];
 
       _hotel.registerAnimal(id, name, habitatId, speciesId);
-    } catch (excCore1 | excpCore 2 | ...) {
-      throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage);
+    } catch (UnknownHabitatKeyException | UnknownSpeciesKeyException | DuplicateAnimalKeyException e) {
+      throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
     }
   }
 
