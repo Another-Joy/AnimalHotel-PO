@@ -8,9 +8,9 @@ public class Vet extends Employee {
     private ArrayList<Species> _species;
     private ArrayList<VaccineRegistry> _registry;
 
-    public Vet(String key, String name, ArrayList<Species> species){
+    public Vet(String key, String name){
         super(key, name);
-        _species = species;
+        _species = new ArrayList<Species>();
         _registry = new ArrayList<VaccineRegistry>();
     }
 

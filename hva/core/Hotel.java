@@ -45,32 +45,43 @@ public class Hotel implements Serializable {
     } catch{pass}
      */
     Animal a = new Animal(); 
-    _animals.add(a);
+    _animals.put(a);
       // throw new UnsupportedOperationException("Unimplemented method 'registerAnimal'");
   }
 
   public void registerSpecies(String id, String name) {
       // TODO Auto-generated method stub
     Species s = new Species(id, name);
-    _species.add(s);
+    _species.put(s);
       throw new UnsupportedOperationException("Unimplemented method 'registerSpecies'");
   }
 
   public void registerEmployee(String id, String name, String empType) {
       // TODO Auto-generated method stub
-    
+    Employee e;
+    switch (empType) {
+      case "VET":
+        e = new Vet(id, name);
+        break;
+      case "TRT":
+        e = new Keeper(id, name);
+      default:
+        break;
+    }
+    _employees.put(e);
       throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
   }
 
   public void registerVaccine(String id, String name, String[] speciesIds) {
       // TODO Auto-generated method stub
+    Vaccine v = new Vaccine(id, name, /* ??? */);
       throw new UnsupportedOperationException("Unimplemented method 'registerVaccine'");
   }
 
   public Habitat registerHabitat(String id, String name, int area) {
       // TODO Auto-generated method stub
       Habitat h = new Habitat(id, name, area);
-      _habitats.add(h);
+      _habitats.put(h);
       throw new UnsupportedOperationException("Unimplemented method 'registerHabitat'");
   }
 }
