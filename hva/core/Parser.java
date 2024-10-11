@@ -51,9 +51,9 @@ public class Parser {
     try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
       String line;
 
-      while ((line = reader.readLine()) != null)
+      while ((line = reader.readLine()) != null){
         parseLine(line);
-
+      }
     }
   }
 

@@ -12,14 +12,15 @@ public class Vaccine extends KeyedEntity{
     }
 
     public String toString() {
-        return ("VACINA|" + super.toString() + "|" + _registry.size() + printSpecies());
+        return ("VACINA|" + super.toString() + "|" + _registry.size() +"|"+ printSpecies());
     }
 
     private String printSpecies(){
+        if (_species.isEmpty()){return ("|VOID");}
         String s = new String();
         for (Species species: _species){
-            s = s + "|" + species.getKey();
+            s = s + "," + species.getKey();
         }
-        return s;
+        return s.substring(1);
     }
 }

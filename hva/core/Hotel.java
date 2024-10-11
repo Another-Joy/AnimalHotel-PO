@@ -14,23 +14,23 @@ public class Hotel implements Serializable {
   private static final long serialVersionUID = 202407081733L;
   
   private Season _season; // = Season.SPRING;
-  private HashMap<String, Species> _species;
-  private HashMap<String, Animal> _animals;
-  private HashMap<String, Habitat> _habitats;
-  private HashMap<String, Tree> _trees;
-  private HashMap<String, Employee> _employees;
-  private HashMap<String, Vaccine> _vaccines;
+  private LinkedHashMap<String, Species> _species;
+  private LinkedHashMap<String, Animal> _animals;
+  private LinkedHashMap<String, Habitat> _habitats;
+  private LinkedHashMap<String, Tree> _trees;
+  private LinkedHashMap<String, Employee> _employees;
+  private LinkedHashMap<String, Vaccine> _vaccines;
   private ArrayList<VaccineRegistry> _registries;
   
 
   public Hotel(){
     _season = Season.SPRING;
-    _species = new HashMap<String, Species>();
-    _animals = new HashMap<String, Animal>();
-    _habitats = new HashMap<String, Habitat>();
-    _trees = new HashMap<String, Tree>();
-    _employees = new HashMap<String, Employee>();
-    _vaccines = new HashMap<String, Vaccine>();
+    _species = new LinkedHashMap<String, Species>();
+    _animals = new LinkedHashMap<String, Animal>();
+    _habitats = new LinkedHashMap<String, Habitat>();
+    _trees = new LinkedHashMap<String, Tree>();
+    _employees = new LinkedHashMap<String, Employee>();
+    _vaccines = new LinkedHashMap<String, Vaccine>();
     _registries = new ArrayList<VaccineRegistry>();
   } 
 
@@ -72,6 +72,7 @@ public class Hotel implements Serializable {
         //throw DuplicateSpeciesNameException, untested & not needed
       }
     }
+    
     _species.put(id, s);
   }
 
@@ -155,25 +156,28 @@ public class Hotel implements Serializable {
     }
   }
 
+
+  
+
   public String show(String type){
     String s = new String();
     switch (type) {
-      case "Animal":
+      case "Animals":
         for (Animal a : _animals.values()){
           s = s + a.toString() + "\n";
         }
         break;      
-      case "Vaccine":
+      case "Vaccines":
         for (Vaccine v : _vaccines.values()){
           s = s + v.toString() + "\n";
         }      
         break;
-      case "Employee":
+      case "Employees":
         for (Employee e : _employees.values()){
           s = s + e.toString() + "\n";
         }
         break;  
-      case "Habitat":
+      case "Habitats":
         for (Habitat h : _habitats.values()){
           s = s + h.toString() + "\n";
         }
@@ -181,7 +185,7 @@ public class Hotel implements Serializable {
       default:
         break;
     }
-    return s;
+    return s.substring(0, s.length()-1);
   }
 
 

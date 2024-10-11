@@ -16,6 +16,17 @@ public class Animal extends KeyedEntity{
     }
 
     public String toString(){
-        return ("ANIMAL|" + super.toString() + "|" + _species.getKey() + "|" + printSaude() + "|" + _habitat.getKey());
+        return ("ANIMAL|" + super.toString() + "|" + _species.getKey() + printSaude() + "|" + _habitat.getKey());
+    }
+
+
+
+    private String printSaude(){
+        if (_healthState.isEmpty()){return ("|VOID");}
+        String s = new String();
+        for (String string: _healthState){
+            s = s + "," + string;
+        }
+        return ("|" + s.substring(1));
     }
 }

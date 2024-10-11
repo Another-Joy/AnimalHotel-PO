@@ -2,6 +2,7 @@ package hva.core.keyedEntities;
 import java.util.ArrayList;
 import java.util.Map;
 
+import hva.core.enums.Influence;
 import hva.core.keyedEntities.employees.Keeper;
 import hva.core.keyedEntities.trees.Tree;
 
