@@ -1,13 +1,4 @@
 package hva.core;
-
-import hva.app.exception.DuplicateAnimalKeyException;
-import hva.app.exception.DuplicateEmployeeKeyException;
-import hva.app.exception.DuplicateHabitatKeyException;
-import hva.app.exception.DuplicateTreeKeyException;
-import hva.app.exception.DuplicateVaccineKeyException;
-import hva.app.exception.NoResponsibilityException;
-import hva.app.exception.UnknownHabitatKeyException;
-import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.enums.Season;
 import hva.core.exception.*;
 import hva.core.keyedEntities.*;
@@ -57,18 +48,18 @@ public class Hotel implements Serializable {
     p.parseFile(filename);
   }
 
-  public void registerAnimal(String id, String name, String habitatId, String speciesId) throws UnknownSpeciesKeyException, UnknownHabitatKeyException, DuplicateAnimalKeyException{
+  public void registerAnimal(String id, String name, String habitatId, String speciesId) throws UnknownSpeciesException, UnknownHabitatException, DuplicateKeyException{
     Species s = _species.get(speciesId);
     Habitat h = _habitats.get(habitatId);
     if (s == null){
-      throw new UnknownSpeciesKeyException(speciesId);
+      throw new UnknownSpeciesException(speciesId);
     } else if(h == null){
-      throw new UnknownHabitatKeyException(habitatId);
+      throw new UnknownHabitatException(habitatId);
     }
      
     Animal a = new Animal(id, name, s, h); 
     if (_animals.putIfAbsent(id, a) != null){
-      throw new DuplicateAnimalKeyException(id);
+      throw new DuplicateKeyException(id);
     }
 
   }
@@ -85,7 +76,7 @@ public class Hotel implements Serializable {
   }
 
 
-  public void registerEmployee(String id, String name, String empType) throws DuplicateEmployeeKeyException{
+  public void registerEmployee(String id, String name, String empType) throws DuplicateKeyException{
     Employee e = null;
     switch (empType) {
       case "VET":
@@ -95,41 +86,40 @@ public class Hotel implements Serializable {
         e = new Keeper(id, name);
     }
     if(_employees.putIfAbsent(id, e) != null){
-      throw new DuplicateEmployeeKeyException(id);
+      throw new DuplicateKeyException(id);
     }
 
       // throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
   }
 
 
-  public void registerVaccine(String id, String name, String[] speciesIds) throws DuplicateVaccineKeyException, UnknownSpeciesKeyException {
+  public void registerVaccine(String id, String name, String[] speciesIds) throws DuplicateKeyException, UnknownSpeciesException {
     ArrayList<Species> species = new ArrayList<Species>();
 
     for(String str : speciesIds) {
       Species s = _species.get(str);
-      if (s == null){throw new UnknownSpeciesKeyException(str);};
+      if (s == null){throw new UnknownSpeciesException(str);};
       species.add(s);
     }
 
     Vaccine v = new Vaccine(id, name, species);
     
     if(_vaccines.putIfAbsent(id, v) != null){
-      throw new DuplicateVaccineKeyException(id);
+      throw new DuplicateKeyException(id);
     }
   
   }
 
 
-  public Habitat registerHabitat(String id, String name, int area) throws DuplicateHabitatKeyException{
+  public void registerHabitat(String id, String name, int area) throws DuplicateKeyException{
     Habitat h = new Habitat(id, name, area);
     if(_habitats.putIfAbsent(id, h) != null){
-      throw new DuplicateHabitatKeyException(id);
+      throw new DuplicateKeyException(id);
     }
-    return h;
   }
 
 
-  public void createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateTreeKeyException, IOException{
+  public void createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateKeyException, IOException{
     Tree t = null;
     switch (treeType) {
       case "CADUCA":
@@ -141,7 +131,7 @@ public class Hotel implements Serializable {
         throw new IOException("Wrong Type");
     }
     if(_trees.putIfAbsent(id, t) != null){
-      throw new DuplicateTreeKeyException(id);
+      throw new DuplicateKeyException(id);
     }
   }
 
@@ -153,15 +143,15 @@ public class Hotel implements Serializable {
 
 
 
-  public void addResponsibility(String employee, String responsibility) throws NoResponsibilityException {
+  public void addResponsibility(String employee, String responsibility) throws WrongResponsibilityException {
     Employee e = _employees.get(employee);
     if (e instanceof Vet){
       Species s = _species.get(responsibility);
-      if (s == null){ throw new NoResponsibilityException(employee, responsibility);}
+      if (s == null){ throw new WrongResponsibilityException(employee, responsibility);}
     }
     else if (e instanceof Keeper){
       Habitat h = _habitats.get(responsibility);
-      if (h == null){ throw new NoResponsibilityException(employee, responsibility);}
+      if (h == null){ throw new WrongResponsibilityException(employee, responsibility);}
     }
   }
 

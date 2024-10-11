@@ -1,5 +1,6 @@
 package hva.core.keyedEntities.trees;
 
+import hva.core.enums.LeafState;
 import hva.core.enums.Season;
 
 public class EvergreenTree extends Tree {
@@ -10,7 +11,6 @@ public class EvergreenTree extends Tree {
 
     @Override
     void seasonalUpdate(Season season) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'seasonalUpdate'");
     }
     
@@ -18,6 +18,9 @@ public class EvergreenTree extends Tree {
         return (super.toString() + "|PERENE|" + getLeafState());
     }
 
+    public LeafState getLeafState(Season season){
+        return LeafState.GENERATE;
+    }
 
 
 }

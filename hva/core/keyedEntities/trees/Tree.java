@@ -22,7 +22,18 @@ public abstract class Tree extends KeyedEntity{
 
     abstract void seasonalUpdate(Season season);
 
+    abstract LeafState getLeafState(Season season);
+    public LeafState getLeafState(){
+        return _leafState;
+    }
+
     public String toString(){
         return ("ÁRVORE|" + super.toString() + "|" + _age + "|" + _cleaningDifficulty);
     }
+    
+    private int getCleaningEffort(Season season){
+        return 0;
+    }
+
+
 }
