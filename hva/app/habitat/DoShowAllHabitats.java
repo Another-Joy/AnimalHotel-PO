@@ -16,6 +16,6 @@ class DoShowAllHabitats extends Command<Hotel> {
   
   @Override
   protected void execute() {
-    _receiver.show("Habitats");
+   _display.popup(_receiver.show("Habitats")); 
   }
 }

@@ -16,6 +16,6 @@ class DoShowAllAnimals extends Command<Hotel> {
   @Override
   protected final void execute() {
     //FIXME implement command
-    _receiver.show("Animals");
+    _display.popup(_receiver.show("Animals"));
   }
 }
