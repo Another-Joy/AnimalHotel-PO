@@ -18,12 +18,6 @@ class DoOpenFile extends Command<HotelManager> {
 
   @Override
   protected final void execute() throws CommandException {
-    /*
-      try {
-      //FIXME implement command
-      } catch (UnavailableFileException efe) {
-      throw new FileOpenFailedException(efe);
-      }
-    */
+    
   }
 }

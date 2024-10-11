@@ -17,6 +17,10 @@ class DoSaveFile extends Command<HotelManager> {
 
   @Override
   protected final void execute() {
-    // FIXME implement command and create a local Form
+    String s = receiver.getFileName();
+    if (s != null) {
+      
+    }
+    reciever.saveAS(s);
   }
 }
