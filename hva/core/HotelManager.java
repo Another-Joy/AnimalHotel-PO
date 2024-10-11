@@ -13,6 +13,15 @@ public class HotelManager {
   /** The current zoo hotel */ // Should we initialize this field?
   private Hotel _hotel = new Hotel();
   
+
+  public void newHotel(){
+    _hotel = new Hotel();
+  }
+
+
+
+
+
   /**
    * Saves the serialized application's state into the file associated to the current network.
    *
@@ -21,8 +30,7 @@ public class HotelManager {
    * @throws IOException if there is some error while serializing the state of the network to disk.
    **/
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
-    // FIXME implement serialization method
-    // saveAS("hotel");
+    saveAs(_hotel.getFileName());
   }
   
   /**
