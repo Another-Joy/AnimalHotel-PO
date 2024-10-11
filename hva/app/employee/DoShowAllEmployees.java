@@ -16,6 +16,6 @@ class DoShowAllEmployees extends Command<Hotel> {
   @Override
   protected void execute() {
     //FIXME implement command
-    _receiver.show("Employees");
+    _display.popup(_receiver.show("Employees"));
   }
 }

@@ -1,5 +1,5 @@
 package hva.core.exception;
 
-public class UnknownHabitatExeptions {
+public class UnknownHabitatExeptions extends Exception {
     
 }
