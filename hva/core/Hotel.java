@@ -1,5 +1,8 @@
 package hva.core;
 
+import hva.app.exception.DuplicateAnimalKeyException;
+import hva.app.exception.UnknownHabitatKeyException;
+import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.enums.Season;
 import hva.core.exception.*;
 import hva.core.keyedEntities.*;
@@ -17,12 +20,12 @@ public class Hotel implements Serializable {
   
   // FIXME define attributes
   private Season _season; // = Season.SPRING;
-  private ArrayList<Species> _species;
-  private ArrayList<Animal> _animals;
-  private ArrayList<Habitat> _habitats;
-  private ArrayList<Tree> _trees;
-  private ArrayList<Employee> _employees;
-  private ArrayList<Vaccine> _vaccines;
+  private HashMap<String, Species> _species;
+  private HashMap<String, Animal> _animals;
+  private HashMap<String, Habitat> _habitats;
+  private HashMap<String, Tree> _trees;
+  private HashMap<String, Employee> _employees;
+  private HashMap<String, Vaccine> _vaccines;
   private ArrayList<VaccineRegistry> _resgistries;
   // FIXME define contructor(s)
   // FIXME define more methods
@@ -38,27 +41,36 @@ public class Hotel implements Serializable {
     //FIXME implement method
   }
 
-  public void registerAnimal(String id, String name, String habitatId, String speciesId) {
-    // TODO Auto-generated method stub
-    /* try {
-      _species.contains(speciesId);
-    } catch{pass}
-     */
-    Animal a = new Animal(); 
-    _animals.add(a);
-      // throw new UnsupportedOperationException("Unimplemented method 'registerAnimal'");
+  public void registerAnimal(String id, String name, String habitatId, String speciesId) throws UnknownSpeciesKeyException, UnknownHabitatKeyException, DuplicateAnimalKeyException{
+    Species s = _species.get(speciesId);
+    Habitat h = _habitats.get(habitatId);
+    if (s == null){
+      throw new UnknownSpeciesKeyException(speciesId);
+    } else if(h == null){
+      throw new UnknownHabitatKeyException(habitatId);
+    }
+     
+    Animal a = new Animal(id, name, s, h); 
+    if (_animals.putIfAbsent(id, a) != null){
+      throw new DuplicateAnimalKeyException(id);
+    }
+
   }
+
 
   public void registerSpecies(String id, String name) {
-      // TODO Auto-generated method stub
     Species s = new Species(id, name);
-    _species.add(s);
-      throw new UnsupportedOperationException("Unimplemented method 'registerSpecies'");
+    for ( Species sp : _species.values()){
+      if (sp.getName() == name){
+        //throw DuplicateSpeciesNameException, untested & not needed
+      }
+    }
+    _species.put(id, s);
   }
 
+
   public void registerEmployee(String id, String name, String empType) {
-      // TODO Auto-generated method stub
-    
+
       throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
   }
 
