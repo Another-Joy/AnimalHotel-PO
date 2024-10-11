@@ -1,6 +1,9 @@
 package hva.core;
 
 import hva.app.exception.DuplicateAnimalKeyException;
+import hva.app.exception.DuplicateEmployeeKeyException;
+import hva.app.exception.DuplicateHabitatKeyException;
+import hva.app.exception.DuplicateVaccineKeyException;
 import hva.app.exception.UnknownHabitatKeyException;
 import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.enums.Season;
@@ -69,21 +72,38 @@ public class Hotel implements Serializable {
   }
 
 
-  public void registerEmployee(String id, String name, String empType) {
+  public void registerEmployee(String id, String name, String empType) throws DuplicateEmployeeKeyException{
+    Employee e = null;
+    switch (empType) {
+      case "VET":
+        e = new Vet(id, name);
+        break;
+      case "TRT":
+        e = new Keeper(id, name);
+    }
+    if(_employees.putIfAbsent(id, e) != null){
+      throw new DuplicateEmployeeKeyException(id);
+    }
 
-      throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
+      // throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
   }
 
-  public void registerVaccine(String id, String name, String[] speciesIds) {
+  public void registerVaccine(String id, String name, String[] speciesIds) throws DuplicateVaccineKeyException, UnknownSpeciesKeyException {
       // TODO Auto-generated method stub
+    for(Species s : speciesIds) {
+      s = _species.get(speciesIds);
+      (s == null) ? throw new UnknownSpeciesKeyException(s);
+    }
     Vaccine v = new Vaccine(id, name, /* ??? */);
       throw new UnsupportedOperationException("Unimplemented method 'registerVaccine'");
   }
 
-  public Habitat registerHabitat(String id, String name, int area) {
+  public  void registerHabitat(String id, String name, int area) throws DuplicateHabitatKeyException{
       // TODO Auto-generated method stub
       Habitat h = new Habitat(id, name, area);
-      _habitats.put(h);
-      throw new UnsupportedOperationException("Unimplemented method 'registerHabitat'");
+      if(_habitats.putIfAbsent(id, h) != null){
+        throw new DuplicateHabitatKeyException(id);
+      }
+      // throw new UnsupportedOperationException("Unimplemented method 'registerHabitat'");
   }
 }
