@@ -16,14 +16,12 @@ import hva.core.keyedEntities.trees.*;
 
 import java.io.*;
 import java.util.*;
-// FIXME import classes
 
 public class Hotel implements Serializable {
 
   @Serial
   private static final long serialVersionUID = 202407081733L;
   
-  // FIXME define attributes
   private Season _season; // = Season.SPRING;
   private HashMap<String, Species> _species;
   private HashMap<String, Animal> _animals;
@@ -46,7 +44,6 @@ public class Hotel implements Serializable {
   } 
 
 
-  // FIXME define more methods
   
   /**
    * Read text input file and create corresponding domain entities.
@@ -55,7 +52,7 @@ public class Hotel implements Serializable {
    * @throws UnrecognizedEntryException if some entry is not correct
    * @throws IOException if there is an IO erro while processing the text file
    **/
-  void importFile(String filename) throws UnrecognizedEntryException, IOException /* FIXME maybe other exceptions */  {
+  void importFile(String filename) throws UnrecognizedEntryException, IOException {
     Parser p = new Parser(this);
     p.parseFile(filename);
   }
@@ -124,15 +121,15 @@ public class Hotel implements Serializable {
 
 
   public Habitat registerHabitat(String id, String name, int area) throws DuplicateHabitatKeyException{
-      Habitat h = new Habitat(id, name, area);
-      if(_habitats.putIfAbsent(id, h) != null){
-        throw new DuplicateHabitatKeyException(id);
-      }
-      return h;
+    Habitat h = new Habitat(id, name, area);
+    if(_habitats.putIfAbsent(id, h) != null){
+      throw new DuplicateHabitatKeyException(id);
+    }
+    return h;
   }
 
 
-  public void plantTree(String id, String name, int age, int difficulty, String treeType, String habitatId) throws DuplicateTreeKeyException, IOException{
+  public void createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateTreeKeyException, IOException{
     Tree t = null;
     switch (treeType) {
       case "CADUCA":
@@ -146,11 +143,14 @@ public class Hotel implements Serializable {
     if(_trees.putIfAbsent(id, t) != null){
       throw new DuplicateTreeKeyException(id);
     }
+  }
 
+  public void plantTree(String treeId, String habitatId){
+    Tree t = _trees.get(treeId);
     Habitat h = _habitats.get(habitatId);
     h.addTree(t);
-
   }
+
 
 
   public void addResponsibility(String employee, String responsibility) throws NoResponsibilityException {
@@ -163,8 +163,36 @@ public class Hotel implements Serializable {
       Habitat h = _habitats.get(responsibility);
       if (h == null){ throw new NoResponsibilityException(employee, responsibility);}
     }
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'addResponsibility'");
   }
+
+  public String show(String type){
+    String s = new String();
+    switch (type) {
+      case "Animal":
+        for (Animal a : _animals.values()){
+          s = s + a.toString() + "\n";
+        }
+        break;      
+      case "Vaccine":
+        for (Vaccine v : _vaccines.values()){
+          s = s + v.toString() + "\n";
+        }      
+        break;
+      case "Employee":
+        for (Employee e : _employees.values()){
+          s = s + e.toString() + "\n";
+        }
+        break;  
+      case "Habitat":
+        for (Habitat h : _habitats.values()){
+          s = s + h.toString() + "\n";
+        }
+        break;
+      default:
+        break;
+    }
+    return s;
+  }
+
 
 }
