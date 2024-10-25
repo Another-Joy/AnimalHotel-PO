@@ -27,11 +27,11 @@ class DoRemoveResponsibility extends Command<Hotel> {
     try {
   _receiver.removeResponsibility(stringField("employee"), stringField("responsibility"));
     } catch (UnknownEmployeeException ex) {
-      throw new UnknownEmployeeKeyException("employee");
+      throw new UnknownEmployeeKeyException(ex.getID());
     } catch (UnknownHabitatException ex) {
-      throw new UnknownHabitatKeyException("responsibility");
+      throw new UnknownHabitatKeyException(ex.getID());
     } catch (UnknownSpeciesException ex) {
-      throw new UnknownSpeciesKeyException("responsibility");
+      throw new UnknownSpeciesKeyException(ex.getID());
     }
   }
 }
