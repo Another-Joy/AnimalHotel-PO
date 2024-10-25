@@ -307,7 +307,7 @@ public class Hotel implements Serializable {
     return _changes;
   }
 
-  public void vaccineate(String idVacina, String idVet, String idAnimal) throws UnknownEmployeeException, UnknownVaccineException, UnknownAnimalException, WrongResponsibilityException{
+  public void vaccinate(String idVacina, String idVet, String idAnimal) throws UnknownEmployeeException, UnknownVaccineException, UnknownAnimalException, WrongResponsibilityException{
    
     if(!_vaccines.containsKey(idVacina)){
       throw new UnknownVaccineException(idVacina);
@@ -329,12 +329,9 @@ public class Hotel implements Serializable {
     setChanges(true);
   }
 
-  public float getSatisfaction(Animal animal) throws UnknownAnimalException{
-    if (animal == null) {
-      throw new UnknownAnimalException(animal.getKey());
-    }
-
-    return animal.getSatisfaction();
+  public float getSatisfaction(String animal) throws UnknownAnimalException{
+    Animal a = getAnimal(animal);
+    return a.getSatisfaction();
   } 
   
 

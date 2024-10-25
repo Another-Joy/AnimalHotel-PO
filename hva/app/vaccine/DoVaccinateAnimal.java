@@ -26,7 +26,7 @@ class DoVaccinateAnimal extends Command<Hotel> {
   @Override
   protected final void execute() throws CommandException {
     try {
-      _receiver.vaccineate(stringField("idVacina"),stringField("idVet"), stringField("idAnimal"));
+      _receiver.vaccinate(stringField("idVacina"),stringField("idVet"), stringField("idAnimal"));
     } catch (UnknownEmployeeException ex) {
       throw new UnknownVeterinarianKeyException(ex.getID());
     } 
