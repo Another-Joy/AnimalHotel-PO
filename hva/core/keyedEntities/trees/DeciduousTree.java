@@ -8,17 +8,39 @@ public class DeciduousTree extends Tree{
     public DeciduousTree(String key, String name, int age, Season season, int cleaningDifficulty) {
         super(key, name, age, season, cleaningDifficulty);
     }
-
-    @Override
-    void seasonalUpdate(Season season) {
-        throw new UnsupportedOperationException("Unimplemented method 'seasonalUpdate'");
-    }
     
     public String toString(){
         return (super.toString() + "|CADUCA|" + getLeafState());
     }
 
-    public LeafState getLeafState(Season season){
-        return LeafState.GENERATE;
+    @Override
+    int getSeasonalEffort(Season season) {
+        switch (season) {
+            case SPRING:
+                return 1;
+            case SUMMER:
+                return 2;
+            case FALL:
+                return 5;
+            case WINTER:
+                return 0;
+        }
+        return 0;
     }
+
+    @Override
+    LeafState getLeafState(Season season) {
+        switch (season) {
+            case SPRING:
+                return LeafState.GENERATE;
+            case SUMMER:
+                return LeafState.WITH;
+            case FALL:
+                return LeafState.WITH;
+            case WINTER:
+                return LeafState.DROP;
+        }
+        return null;
+    }
+
 }

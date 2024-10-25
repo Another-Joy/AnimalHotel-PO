@@ -287,14 +287,9 @@ public class Hotel implements Serializable {
   }
 
   public void advanceSeason() {
-    switch (_season) {
-      case Season.SPRING:
-        _season = Season.SUMMER;
-        
-        break;
-    
-      default:
-        break;
+    _season = _season.next();
+    for (Tree t: _trees.values()){
+      t.seasonalUpdate(_season);
     }
   }
 

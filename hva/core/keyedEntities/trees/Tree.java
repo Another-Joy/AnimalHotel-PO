@@ -16,15 +16,21 @@ public abstract class Tree extends KeyedEntity{
         _age = age;
         _agingSeason = season;
         _cleaningDifficulty = cleaningDifficulty;
-        _seasonalEffort = getCleaningEffort(season);
+        _seasonalEffort = getSeasonalEffort(season);
         _leafState = getLeafState(season);
     }
 
 
+    public double getCleaningEffort(){
+        return (_cleaningDifficulty*_seasonalEffort*(Math.log(_age)));
+    }
 
-    abstract void seasonalUpdate(Season season);
+    public void seasonalUpdate(Season season){
+        if (season == _agingSeason){ _age += 1;}
+        _leafState = getLeafState(season);
+        _seasonalEffort = getSeasonalEffort(season);
+    }
 
-    abstract LeafState getLeafState(Season season);
     public LeafState getLeafState(){
         return _leafState;
     }
@@ -33,9 +39,9 @@ public abstract class Tree extends KeyedEntity{
         return ("ÁRVORE|" + super.toString() + "|" + _age + "|" + _cleaningDifficulty);
     }
     
-    private int getCleaningEffort(Season season){
-        return 0;
-    }
+    abstract int getSeasonalEffort(Season season);
+    
+    abstract LeafState getLeafState(Season season);
 
 
 }

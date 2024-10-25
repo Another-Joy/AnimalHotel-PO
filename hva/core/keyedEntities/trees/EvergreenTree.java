@@ -8,19 +8,39 @@ public class EvergreenTree extends Tree {
     public EvergreenTree(String key, String name, int age, Season season, int cleaningDifficulty) {
         super(key, name, age, season, cleaningDifficulty);
     }
-
-    @Override
-    void seasonalUpdate(Season season) {
-        throw new UnsupportedOperationException("Unimplemented method 'seasonalUpdate'");
-    }
     
     public String toString(){
         return (super.toString() + "|PERENE|" + getLeafState());
     }
 
-    public LeafState getLeafState(Season season){
-        return LeafState.GENERATE;
+    @Override
+    int getSeasonalEffort(Season season) {
+        switch (season) {
+            case SPRING:
+                return 1;
+            case SUMMER:
+                return 1;
+            case FALL:
+                return 1;
+            case WINTER:
+                return 2;
+        }
+        return 0;
     }
 
+    @Override
+    LeafState getLeafState(Season season) {
+        switch (season) {
+            case SPRING:
+                return LeafState.GENERATE;
+            case SUMMER:
+                return LeafState.WITH;
+            case FALL:
+                return LeafState.DROP;
+            case WINTER:
+                return LeafState.NO;
+        }
+        return null;
+    }
 
 }
