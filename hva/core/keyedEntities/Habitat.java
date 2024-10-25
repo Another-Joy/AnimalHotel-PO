@@ -53,4 +53,14 @@ public class Habitat extends KeyedEntity {
         _influences.put(species, influence);
     }
 
+
+    public double satisfactionCost(){
+        double res = _area + (3*_animals.size());
+        for (Tree t: _trees){
+            res += t.getCleaningEffort();
+        }
+        res = _keepers.size() / res;
+        return res;
+    }
+
 }

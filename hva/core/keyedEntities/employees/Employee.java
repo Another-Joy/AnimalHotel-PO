@@ -9,4 +9,6 @@ public abstract class Employee extends KeyedEntity {
     }
     
     public abstract String toString();
+
+    public abstract double calculateSatisfaction();
 }

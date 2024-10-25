@@ -38,4 +38,14 @@ public class Keeper extends Employee{
     public void removeHabitat(Habitat habitat) {
         _habitats.remove(habitat);
     }
+
+
+    @Override
+    public double calculateSatisfaction() {
+        double res = 300;
+        for (Habitat h : _habitats){
+            res -= h.satisfactionCost();
+        }
+        return res;
+    }
 }

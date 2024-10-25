@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 import hva.core.exception.WrongResponsibilityException;
 import hva.core.keyedEntities.Animal;
+import hva.core.keyedEntities.Habitat;
 import hva.core.keyedEntities.Species;
 import hva.core.keyedEntities.Vaccine;
 import hva.core.keyedEntities.VaccineRegistry;
@@ -49,5 +50,18 @@ public class Vet extends Employee {
     public void removeSpecies(Species species) {
        _species.remove(species);
     }
+
+
+    @Override
+    public double calculateSatisfaction() {
+        double res = 20;
+        for (Species s: _species){
+            res -= s.satisfactionCost();
+        }
+        return res;
+    }
+    }
+
+
 
 }
