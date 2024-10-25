@@ -238,6 +238,10 @@ public class Hotel implements Serializable {
     return Collections.unmodifiableCollection(_employees.values());
   }
 
+  public Collection<VaccineRegistryRegistry> showRegistry() {
+    return Collections.unmodifiableCollection(_registries);
+  }
+
 
   public boolean getChanges() {return _changes;}
 

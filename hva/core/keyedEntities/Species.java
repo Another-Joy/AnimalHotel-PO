@@ -17,6 +17,9 @@ public class Species extends KeyedEntity {
     }
 
     public int calculateDiference(ArrayList<Species> species) {
+        if (species.contains(this)){
+            return 0;
+        }
         ArrayList<Integer> common = new ArrayList<Integer>(); int i= 0;
         for (Species s: species){
             common.set(i, 0);
@@ -35,7 +38,6 @@ public class Species extends KeyedEntity {
             common.set(i, lenBig - common.get(i));
         }
         return Collections.max(common);
-        
     }
     
 

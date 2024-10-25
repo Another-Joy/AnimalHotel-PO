@@ -26,9 +26,9 @@ class DoRegisterVaccine extends Command<Hotel> {
     try {
       _receiver.registerVaccine(stringField("id"), stringField("name"), stringField("speciesList").replaceAll("\\w", "").split(","));
     } catch (UnknownSpeciesException ex) {
-      throw new UnknownSpeciesKeyException("id");
+      throw new UnknownSpeciesKeyException(ex.getID());
     } catch (DuplicateKeyException ex) {
-      throw new DuplicateVaccineKeyException("id");
+      throw new DuplicateVaccineKeyException(ex.getID());
     }
   }
 }

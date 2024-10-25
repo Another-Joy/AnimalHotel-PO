@@ -28,14 +28,14 @@ class DoVaccinateAnimal extends Command<Hotel> {
     try {
       _receiver.vaccineate(stringField("idVacina"),stringField("idVet"), stringField("idAnimal"));
     } catch (UnknownEmployeeException ex) {
-      throw new UnknownVeterinarianKeyException("idVet");
+      throw new UnknownVeterinarianKeyException(ex.getID());
     } 
     catch (WrongResponsibilityException ex) {
-      throw new VeterinarianNotAuthorizedException("idVet",  ex.getResponsibility());
+      throw new VeterinarianNotAuthorizedException(ex.getEmployee(),  ex.getResponsibility());
     } catch (UnknownVaccineException ex) {
-      throw new UnknownVaccineKeyException("idVacina");
+      throw new UnknownVaccineKeyException(ex.getID());
     } catch (UnknownAnimalException ex) {
-      throw new UnknownAnimalKeyException("idAnimal");
+      throw new UnknownAnimalKeyException(ex.getID());
     }
   }
 }
