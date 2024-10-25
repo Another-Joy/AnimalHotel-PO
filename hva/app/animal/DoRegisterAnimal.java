@@ -30,11 +30,11 @@ class DoRegisterAnimal extends Command<Hotel> {
     try{
     _receiver.registerAnimal(stringField("id"), stringField("name"), stringField("idHabitat"),stringField("idSpecies"));
   } catch (UnknownSpeciesException ex){
-    throw new UnknownSpeciesKeyException("id");
+    throw new UnknownSpeciesKeyException(ex.getID());
   } catch (UnknownHabitatException ex){
-    throw new UnknownHabitatKeyException("idHabitat");
+    throw new UnknownHabitatKeyException(ex.getID());
   } catch (DuplicateKeyException ex){
-    throw new DuplicateAnimalKeyException("id");
+    throw new DuplicateAnimalKeyException(ex.getID());
   }
 
 }

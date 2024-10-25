@@ -22,7 +22,7 @@ class DoRegisterHabitat extends Command<Hotel> {
     try {
       _receiver.registerHabitat(stringField("idHabitat"), stringField("name"), integerField("area"));
     } catch (DuplicateKeyException ex) {
-      throw new DuplicateHabitatKeyException("idHabitat");
+      throw new DuplicateHabitatKeyException(ex.getID());
     }
   }
 }

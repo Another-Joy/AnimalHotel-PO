@@ -25,7 +25,7 @@ class DoAddTreeToHabitat extends Command<Hotel> {
     try{
     _receiver.createTree(stringField("id"), stringField("name"), stringField("treeType"), integerField("age"), integerField("dificulty"));
     } catch (DuplicateKeyException ex) {
-      throw new DuplicateTreeKeyException("id");
+      throw new DuplicateTreeKeyException(ex.getID());
     }
   }
 }

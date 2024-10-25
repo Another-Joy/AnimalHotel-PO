@@ -29,11 +29,11 @@ class DoAddResponsibility extends Command<Hotel> {
     try{
     _receiver.addResponsibility(stringField("employee"), stringField("responsibility"));
   } catch (UnknownEmployeeException ex) {
-    throw new UnknownEmployeeKeyException("employee");
+    throw new UnknownEmployeeKeyException(ex.getID());
   } catch (UnknownHabitatException ex){
-    throw new UnknownHabitatKeyException("responsibility");
+    throw new UnknownHabitatKeyException(ex.getID());
   } catch (UnknownSpeciesException ex) {
-    throw new UnknownSpeciesKeyException("responsibility");
+    throw new UnknownSpeciesKeyException(ex.getID());
   }
 
   }

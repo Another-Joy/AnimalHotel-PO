@@ -24,7 +24,7 @@ class DoRegisterEmployee extends Command<Hotel> {
     try {
    _receiver.registerEmployee(stringField("id"),stringField("name") ,stringField("type"));
   } catch (DuplicateKeyException ex){
-    throw new DuplicateEmployeeKeyException("id");
+    throw new DuplicateEmployeeKeyException(ex.getID());
   }
 }
 }
