@@ -338,9 +338,9 @@ public class Hotel implements Serializable {
 
 
 
-public double getEmployeeSatisfaction(String stringField) throws UnknownEmployeeException {
+public float getEmployeeSatisfaction(String stringField) throws UnknownEmployeeException {
   Employee e = getEmployee(stringField);
-  return e.calculateSatisfaction();
+  return (float) e.calculateSatisfaction();
 } 
   
 
