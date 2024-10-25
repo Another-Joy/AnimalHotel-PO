@@ -358,5 +358,17 @@ public double getEmployeeSatisfaction(String stringField) throws UnknownEmployee
   return e.calculateSatisfaction();
 } 
   
+public double getGlobalSatisfaction(){
+  double sat = 0;
+  try{
+    for (String akey: _animals.keySet()){
+      sat += getAnimalSatisfaction(akey);
+    }  
+    for (String ekey: _employees.keySet()){
+      sat += getEmployeeSatisfaction(ekey);
+    }
+  } catch (Exception e){}
+  return sat;
+}
 
 }

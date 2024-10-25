@@ -18,9 +18,9 @@ class DoAddTreeToHabitat extends Command<Hotel> {
     addStringField("hid", Prompt.habitatKey());
     addStringField("tid", Prompt.treeKey());
     addStringField("name", Prompt.treeName());
-    addStringField("treeType", Prompt.treeType());
     addIntegerField("age", Prompt.treeAge());
     addIntegerField("dificulty", Prompt.treeDifficulty());
+    addStringField("treeType", Prompt.treeType());
   }
   
   @Override

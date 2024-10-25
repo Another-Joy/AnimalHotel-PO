@@ -46,7 +46,7 @@ public class Habitat extends KeyedEntity {
 
 
     public float genericAnimalSatisfaction(Animal animal) {      
-        return ((_animals.size()/_area) + _influences.getOrDefault(animal.getSpecies(), Influence.NEU).getInt());
+        return ((_area/_animals.size()) + _influences.getOrDefault(animal.getSpecies(), Influence.NEU).getInt());
     }
 
     public void setArea(int area) {
@@ -63,7 +63,7 @@ public class Habitat extends KeyedEntity {
         for (Tree t: _trees){
             res += t.getCleaningEffort();
         }
-        res = _keepers.size() / res;
+        res = res/_keepers.size();
         return res;
     }
 
