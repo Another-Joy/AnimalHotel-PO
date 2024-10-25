@@ -1,6 +1,8 @@
 package hva.app.habitat;
 
+import hva.app.exception.UnknownHabitatKeyException;
 import hva.core.Hotel;
+import hva.core.exception.UnknownHabitatException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
@@ -12,11 +14,16 @@ class DoShowAllTreesInHabitat extends Command<Hotel> {
 
   DoShowAllTreesInHabitat(Hotel receiver) {
     super(Label.SHOW_TREES_IN_HABITAT, receiver);
-    //FIXME add command fields
+    addStringField("idHabitat", Prompt.habitatKey());
+
   }
   
   @Override
   protected void execute() throws CommandException {
-    //FIXME implement command
+    try {
+      // _receiver.showAllTrees
+    } catch (UnknownHabitatException ex) {
+      throw new UnknownHabitatKeyException(ex.getID())
+    }
   }
 }
