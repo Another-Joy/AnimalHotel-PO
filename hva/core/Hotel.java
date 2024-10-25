@@ -325,6 +325,13 @@ public class Hotel implements Serializable {
     setChanges(true);
   }
 
+  public float getSatisfaction(Animal animal) throws UnknownAnimalException{
+    if (animal == null) {
+      throw new UnknownAnimalException(animal.getKey());
+    }
+
+    return animal.getSatisfaction();
+  } 
   
 
 }

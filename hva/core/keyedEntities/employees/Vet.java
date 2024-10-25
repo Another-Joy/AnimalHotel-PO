@@ -56,11 +56,11 @@ public class Vet extends Employee {
     public double calculateSatisfaction() {
         double res = 20;
         for (Species s: _species){
-            res -= s.satisfactionCost();
+                res -= s.satisfactionCost();
         }
         return res;
     }
-    }
+    
 
 
 
