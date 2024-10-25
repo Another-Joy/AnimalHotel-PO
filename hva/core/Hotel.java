@@ -289,10 +289,12 @@ public class Hotel implements Serializable {
 
   public void advanceSeason() {
     _season = _season.next();
-    if (_season == null) {throw new NullPointerException("season is null");}
-    for (Tree t: _trees.values()){
-      if (_trees.isEmpty()) {throw new NullPointerException("tree is null");}
-      t.seasonalUpdate(_season);
+    for (String k: _trees.keySet()){
+      if (_trees.get(k) == null) {
+        // Handle the null case if needed, e.g., log a warning or continue.
+        throw new NullPointerException("Warning: Found a null tree in the collection: " + k);
+      }
+      _trees.get(k).seasonalUpdate(_season);
     }
   }
 
