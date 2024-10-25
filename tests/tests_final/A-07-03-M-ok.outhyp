@@ -26,7 +26,8 @@ Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do 
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Identificador único da árvore: Nome da árvore: Tipo de árvore: (CADUCA ou PERENE) Idade da árvore: Dificuldade de limpeza da árvore: Gestão de Habitats
+Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Tipo de árvore: (CADUCA ou PERENE) Idade da árvore: Dificuldade de limpeza da árvore: Dificuldade de limpeza da árvore: Plantar árvore: Operação inválida: O habitat 'hh' não existe.
+Gestão de Habitats
 1 - Visualizar todos os habitats
 2 - Registar habitat
 3 - Alterar área de habitat
@@ -34,7 +35,6 @@ Escolha uma opção: Identificador único da árvore: Nome da árvore: Tipo de �
 5 - Plantar árvore
 6 - Mostrar árvores de habitat
 0 - Sair
-Escolha uma opção: Número inválido!
 Escolha uma opção: Menu Principal
 1 - Criar ficheiro
 2 - Abrir ficheiro
@@ -47,4 +47,4 @@ Escolha uma opção: Menu Principal
 9 - Gestão de vacinas
 10 - Consultas
 0 - Sair
-Escolha uma opção: 
+Escolha uma opção: Fim de entrada de dados (R-EOF): pt.tecnico.uilib.text.RuntimeEOFException: Fim do fluxo de dados de entrada

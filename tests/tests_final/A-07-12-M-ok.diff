@@ -1,5 +1,5 @@
 *** tests/tests_final/A-07-12-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-07-12-M-ok.outhyp	2024-10-25 22:05:14.843068699 +0100
+--- tests/tests_final/A-07-12-M-ok.outhyp	2024-10-25 23:08:40.655333741 +0100
 ***************
 *** 18,25 ****
   5 - Plantar árvore
@@ -14,101 +14,157 @@
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Identificador único da árvore: Nome da árvore: Tipo de árvore: (CADUCA ou PERENE) Idade da árvore: Dificuldade de limpeza da árvore: Gestão de Habitats
+! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Tipo de árvore: (CADUCA ou PERENE) Idade da árvore: Dificuldade de limpeza da árvore: Dificuldade de limpeza da árvore: Gestão de Habitats
   1 - Visualizar todos os habitats
   2 - Registar habitat
   3 - Alterar área de habitat
 ***************
-*** 27,32 ****
---- 26,32 ----
+*** 27,168 ****
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
-***************
-*** 60,67 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 1
+! Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: Gestão de Habitats
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
 ! Escolha uma opção: Identificador único do habitat: ÁRVORE|t1|t1|1|1|CADUCA|COMFOLHAS
 ! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 60,66 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 2
+! Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
 ! Escolha uma opção: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
-***************
-*** 69,74 ****
---- 68,74 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
-***************
-*** 102,109 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
 ! Escolha uma opção: Identificador único do habitat: ÁRVORE|t1|t1|1|1|CADUCA|LARGARFOLHAS
 ! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 102,108 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 3
+! Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
 ! Escolha uma opção: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
-***************
-*** 111,116 ****
---- 110,116 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
-***************
-*** 144,151 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
 ! Escolha uma opção: Identificador único do habitat: ÁRVORE|t1|t1|1|1|CADUCA|SEMFOLHAS
 ! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 144,150 ----
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 26,29 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
-***************
-*** 153,158 ****
---- 152,158 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Fim de entrada de dados (R-EOF): pt.tecnico.uilib.text.RuntimeEOFException: Fim do fluxo de dados de entrada
