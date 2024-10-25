@@ -160,8 +160,8 @@ public class Hotel implements Serializable {
     Habitat h = getHabitat(hId);
     Tree t = createTree(id, name, treeType, age, difficulty);
     h.addTree(t);
-    return t;
     setChanges(true);
+    return t;
   }
 
 
