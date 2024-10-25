@@ -1,0 +1,2 @@
+./runtestsprivate.sh
+./runtestsfinal.sh

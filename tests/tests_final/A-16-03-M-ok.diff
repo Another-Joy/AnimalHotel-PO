@@ -1,0 +1,57 @@
+*** tests/tests_final/A-16-03-M-ok.out	2024-10-20 12:31:15.000000000 +0100
+--- tests/tests_final/A-16-03-M-ok.outhyp	2024-10-25 03:51:28.914577829 +0100
+***************
+*** 17,40 ****
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Identificador único do funcionário: Nome do funcionário: Tipo do funcionário? (VET ou TRT) Registar funcionário: Operação inválida: O funcionário 'T1' já existe.
+! Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+  3 - Atribuir responsabilidade
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Identificador único do funcionário: Nome do funcionário: Tipo do funcionário? (VET ou TRT) Registar funcionário: Operação inválida: O funcionário 'V1' já existe.
+! Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+  3 - Atribuir responsabilidade
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: TRT|T1|Trt one
+! VET|V1|Vet one
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+--- 17,44 ----
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+  3 - Atribuir responsabilidade
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+  3 - Atribuir responsabilidade
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: TRT|T1|Trt one|VOID
+! VET|V1|Vet one|VOID
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário

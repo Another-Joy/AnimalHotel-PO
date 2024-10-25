@@ -3,42 +3,11 @@ package hva.core;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.Reader;
-
-import java.util.Collection;
-import java.util.ArrayList;
-
-import hva.app.exception.DuplicateAnimalKeyException;
-import hva.app.exception.UnknownAnimalKeyException;
-import hva.app.exception.UnknownHabitatKeyException;
-import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.exception.UnrecognizedEntryException;
 import hva.core.exception.WrongResponsibilityException;
 import hva.core.exception.DuplicateKeyException;
 import hva.core.exception.UnknownHabitatException;
 import hva.core.exception.UnknownSpeciesException;
-import hva.core.keyedEntities.Habitat;
-
-// FIXME add other imports if needed
-
-/**
- * Esta solução assume que a classe Hotel já tem a seguinte funcionalidade
-
-public class Hotel {
-  public void registerAnimal(animalId, name, habitatId, speciesId) throws OneOrMoreCoreExceptions { ... }
-  public void registerSpecies(speciesId, name) throws OneOrMoreCoreExceptions { ... }
-  public void registerEmployee(employeeId, name, empType) throws OneOrMoreCoreExceptions { ... }
-  public void addResponsibility(employeeId, responsibility) throws OneOrMoreCoreExceptions { ... }
-  public void registerVaccine(vaccineId, name, String[] speciesIds) throws someCoreExceptionsOneOrMoreCoreExceptions { ... }
-  public void createTree(TreeId, name, type, age, diff) throws OneOrMoreCoreExceptions { ... }
-  public Habitat registerHabitat(habitatId, name, area) throws OneOrMoreCoreExceptions { ... }
-
-Note-se que esta funcionalidade pode ser utilizada na concretização de alguns dos comandos.
-Caso Hotel não tenha esta funcionalidade, então deverão substituir a invocação destes métodos
-na classe Parser por uma ou mais linhas com uma funcionalidade semelhante.
-Cada um destes métodos pode lançar uma ou mais excepções que irão corresponder aos erros que
-podem acontecer ao nível do domínio surante a concretização da funcionalidade em causa.
-**/
 
 public class Parser {
   private Hotel _hotel;
@@ -162,10 +131,3 @@ public class Parser {
     }
   }
 }
-
-/**
- * Nota: O bloco catch presente nos vários métodos parse desta classe deverá ter em conta
- * as várias excepções que podem acontecer no contexto do bloco try em questão.
- * Estas excepções do domínio têm que ser definidas por cada grupo e devem representar situações
- * de erro específicas do domínio.
- **/

@@ -9,13 +9,14 @@ import java.io.*;
  * Class representing the manager of this application. It manages the current
  * zoo hotel.
  **/
-public class HotelManager {
+public class HotelManager implements Serializable {
   /** The current zoo hotel */ // Should we initialize this field?
   private Hotel _hotel = new Hotel();
-  
+  private String _filename = null;
 
   public void newHotel(){
     _hotel = new Hotel();
+    
   }
 
 
@@ -30,24 +31,9 @@ public class HotelManager {
    * @throws IOException if there is some error while serializing the state of the network to disk.
    **/
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
-    saveAs(_hotel.getFileName());
-  }
-  
-  /**
-   * Saves the serialized application's state into the specified file. The current network is
-   * associated to this file.
-   *
-   * @param filename the name of the file.
-   * @throws FileNotFoundException if for some reason the file cannot be created or opened.
-   * @throws MissingFileAssociationException if the current network does not have a file.
-   * @throws IOException if there is some error while serializing the state of the network to disk.
-   **/
-  public void saveAs(String filename) throws FileNotFoundException, MissingFileAssociationException, IOException {
-    // FIXME implement serialization method
-    
     try {
       // Create a file to save the serialized object
-      FileOutputStream fileOut = new FileOutputStream(filename + ".ser");
+      FileOutputStream fileOut = new FileOutputStream(_filename + ".ser");
       ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
       // Serialize the object
@@ -62,6 +48,21 @@ public class HotelManager {
   }
   
   /**
+   * Saves the serialized application's state into the specified file. The current network is
+   * associated to this file.
+   *
+   * @param filename the name of the file.
+   * @throws FileNotFoundException if for some reason the file cannot be created or opened.
+   * @throws MissingFileAssociationException if the current network does not have a file.
+   * @throws IOException if there is some error while serializing the state of the network to disk.
+   **/
+  public void saveAs(String filename) throws FileNotFoundException, MissingFileAssociationException, IOException {
+    // FIXME implement serialization method
+    _filename = filename;
+  save();
+  }
+  
+  /**
    * @param filename name of the file containing the serialized application's state
    *        to load.
    * @throws UnavailableFileException if the specified file does not exist or there is
@@ -71,22 +72,22 @@ public class HotelManager {
     // FIXME implement serialization method
     try {
       // Read the serialized object from the file
-      FileInputStream fileIn = new FileInputStream(filename + ".ser");
+      FileInputStream fileIn = new FileInputStream(filename);
       ObjectInputStream in = new ObjectInputStream(fileIn);
 
       // Deserialize the object
-      _hotel = (Hotel) in.readObject();
-      in.close();
-      fileIn.close();
+      // _hotel = (Hotel) in.readObject();
+      // in.close();
+      // fileIn.close();
 
       // System.out.println("Deserialized Person: " + person);
   } catch (FileNotFoundException f) {
       f.printStackTrace();
   } catch (IOException i) {
       i.printStackTrace();
-  } catch (ClassNotFoundException e) {
+  // } catch (ClassNotFoundException e) {
     // TODO Auto-generated catch block
-    e.printStackTrace();
+    // e.printStackTrace();
   }
   }
   
@@ -101,7 +102,7 @@ public class HotelManager {
   public void importFile(String filename) throws ImportFileException {
     try {
       _hotel.importFile(filename);
-    } catch (IOException | UnrecognizedEntryException /* FIXME maybe other exceptions */ e) {
+    } catch (IOException | UnrecognizedEntryException e) {
       throw new ImportFileException(filename, e);
     }
   } 
@@ -113,5 +114,9 @@ public class HotelManager {
    **/
   public final Hotel getHotel() {
     return _hotel;
+  }
+
+  public String getFileName() {
+    return _filename;
   }
 }

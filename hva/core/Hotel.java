@@ -13,7 +13,7 @@ public class Hotel implements Serializable {
   @Serial
   private static final long serialVersionUID = 202407081733L;
   
-  private String _fileName;
+  // private String _fileName;
   private Season _season; // = Season.SPRING;
   private LinkedHashMap<String, Species> _species;
   private LinkedHashMap<String, Animal> _animals;
@@ -25,7 +25,7 @@ public class Hotel implements Serializable {
   
 
   public Hotel(){
-    _fileName = null;
+    // _fileName = null;
     _season = Season.SPRING;
     _species = new LinkedHashMap<String, Species>();
     _animals = new LinkedHashMap<String, Animal>();
@@ -38,9 +38,9 @@ public class Hotel implements Serializable {
 
 
 
-  public String getFileName(){
-    return _fileName;
-  }
+  // public String getFileName(){
+  //   return _fileName;
+  // }
   
   /**
    * Read text input file and create corresponding domain entities.

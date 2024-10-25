@@ -1,0 +1,49 @@
+*** tests/tests_final/A-20-04-M-ok.out	2024-10-20 12:31:15.000000000 +0100
+--- tests/tests_final/A-20-04-M-ok.outhyp	2024-10-25 03:51:30.996645295 +0100
+***************
+*** 23,42 ****
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A vacina 'V1' já existe.
+! Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A vacina 'v1' já existe.
+! Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+  Escolha uma opção: Menu Principal
+  1 - Criar ficheiro
+  2 - Abrir ficheiro
+--- 23,46 ----
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
+  Escolha uma opção: Menu Principal
+  1 - Criar ficheiro
+  2 - Abrir ficheiro

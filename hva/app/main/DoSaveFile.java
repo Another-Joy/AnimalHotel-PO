@@ -4,6 +4,9 @@ import hva.core.HotelManager;
 import hva.core.exception.MissingFileAssociationException;
 import pt.tecnico.uilib.forms.Form;
 import pt.tecnico.uilib.menus.Command;
+import pt.tecnico.uilib.menus.CommandException;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 // FIXME add more imports if needed
 
@@ -16,11 +19,21 @@ class DoSaveFile extends Command<HotelManager> {
   }
 
   @Override
-  protected final void execute() {
-    String s = receiver.getFileName();
-    if (s != null) {
-      
-    }
-    reciever.saveAS(s);
+  protected final void execute() throws CommandException{
+     try{
+      String fileName = _receiver.getFileName();
+      if(fileName.isEmpty()) {
+        _receiver.saveAs(Form.requestString(Prompt.newSaveAs()));
+      }
+      _receiver.save();
+
+     } catch (FileNotFoundException ex) {
+      _display.popup(ex.getMessage());
+     } catch (MissingFileAssociationException ex) {
+      _display.popup(ex.getMessage());
+     } catch (IOException ex) {
+      _display.popup(ex.getMessage());
+     }
   }
 }
+// 

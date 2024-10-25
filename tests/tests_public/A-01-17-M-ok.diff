@@ -1,0 +1,27 @@
+*** tests/tests_public/A-01-17-M-ok.out	2024-10-09 09:12:10.000000000 +0100
+--- tests/tests_public/A-01-17-M-ok.outhyp	2024-10-25 03:56:18.579885558 +0100
+***************
+*** 19,29 ****
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+  Escolha uma opção: 1
+! VET|A24|Rohit Figueiredo
+! VET|A34|Rohit Figueiredo 2
+! VET|B24|Rohit Figueiredo 3
+! VET|D24|Rohit Figueiredo 4
+! VET|X24|Rohit Figueiredo 5
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+--- 19,29 ----
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+  Escolha uma opção: 1
+! VET|A24|Rohit Figueiredo|VOID
+! VET|A34|Rohit Figueiredo 2|VOID
+! VET|B24|Rohit Figueiredo 3|VOID
+! VET|D24|Rohit Figueiredo 4|VOID
+! VET|X24|Rohit Figueiredo 5|VOID
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
