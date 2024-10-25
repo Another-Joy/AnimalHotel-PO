@@ -2,6 +2,7 @@ package hva.core.keyedEntities;
 import java.util.ArrayList;
 
 import hva.core.enums.HealthState;
+import hva.core.keyedEntities.employees.Vet;
 
 public class Animal extends KeyedEntity{
     private ArrayList<HealthState> _healthState;
@@ -25,8 +26,35 @@ public class Animal extends KeyedEntity{
         _habitat = hab;
     }
 
+    public VaccineRegistry registerVaccine(Vet vet, Vaccine vac){
+        VaccineRegistry reg = new VaccineRegistry(vac, _species, vet);
+        _vaccines.add(reg);
+        return reg;
+    }
 
 
+    public void updateHealthState(Vaccine vac) {
+        _species.calculateDiference(vac.getSpecies());
+    }
+
+    public boolean equalSpecies(Animal a){
+        return (a.getSpecies() == _species);
+    }
+
+
+    public Species getSpecies() {
+        return _species;
+    }
+
+    public float getSatisfaction(){
+        float res = 20;
+        for (Animal a: _habitat.getAnimals()){
+            if (equalSpecies(a)){res += 3;}
+            else {res -= 2;}
+        }
+        res += _habitat.genericAnimalSatisfaction(this);
+        return res;
+    }
 
     private String printSaude(){
         if (_healthState.isEmpty()){return ("|VOID");}

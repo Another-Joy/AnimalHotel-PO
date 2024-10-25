@@ -1,8 +1,10 @@
 package hva.core.keyedEntities.employees;
 import java.util.ArrayList;
 
+import hva.core.keyedEntities.Animal;
 import hva.core.keyedEntities.Habitat;
 import hva.core.keyedEntities.Species;
+import hva.core.keyedEntities.Vaccine;
 import hva.core.keyedEntities.VaccineRegistry;
 
 public class Vet extends Employee {
@@ -18,6 +20,13 @@ public class Vet extends Employee {
 
     public String toString(){
         return ("VET|" + super.toString() + printResponsibilities());
+    }
+
+
+    public void vacinate(Vaccine vac, Animal animal){
+        VaccineRegistry reg = animal.registerVaccine(this, vac);
+        vac.registerVaccine(reg);
+        animal.updateHealthState(vac);
     }
 
 

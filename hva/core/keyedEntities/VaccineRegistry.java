@@ -14,5 +14,13 @@ public class VaccineRegistry implements Serializable{
         _species = species;
         _vet = vet;
     }
+
+    public String toString(){
+        return ("REGISTO-VACINA|" + _vaccine.getKey() + "|" + _vet.getKey() + "|" + _species.getKey());
+    }
+
+    public Object getVaccine() {
+        return _vaccine;
+    }
     
 }

@@ -12,4 +12,9 @@ public class Species extends KeyedEntity {
     public String toString(){
         return ("ESPÉCIE|" + super.toString());
     }
+
+    public void calculateDiference(ArrayList<Species> species) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateDiference'");
+    }
 }
