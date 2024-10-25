@@ -323,9 +323,11 @@ public class Hotel implements Serializable {
       throw new UnknownAnimalException(idAnimal);
     }
     Animal a = _animals.get(idAnimal);
-
-    ((Vet) vet).vacinate(vaccine, a);
-  
+    try{
+      ((Vet) vet).vacinate(vaccine, a);
+    } catch(ClassCastException e){
+      throw new WrongResponsibilityException(idVet, idVet);
+    }
     setChanges(true);
   }
 
