@@ -1,40 +1,20 @@
 *** tests/tests_final/A-21-05-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-21-05-M-ok.outhyp	2024-10-25 20:00:42.748532256 +0100
+--- tests/tests_final/A-21-05-M-ok.outhyp	2024-10-25 20:59:02.112910543 +0100
 ***************
-*** 16,44 ****
+*** 22,29 ****
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: Gestão de Vacinas
-! 1 - Visualizar todas as vacinas
-! 2 - Registar vacina
-! 3 - Vacinar animal
-! 4 - Mostrar vacinações
-! 0 - Sair
 ! Escolha uma opção: REGISTO-VACINA|Vac1|Vet1|E1
 ! Gestão de Vacinas
-! 1 - Visualizar todas as vacinas
-! 2 - Registar vacina
-! 3 - Vacinar animal
-! 4 - Mostrar vacinações
-! 0 - Sair
-! Escolha uma opção: Menu Principal
-! 1 - Criar ficheiro
-! 2 - Abrir ficheiro
-! 3 - Guardar ficheiro
-! 4 - Avançar estação do ano
-! 5 - Ver satisfação global
-! 6 - Gestão de animais
-! 7 - Gestão de funcionários
-! 8 - Gestão de habitats
-! 9 - Gestão de vacinas
-! 10 - Consultas
-! 0 - Sair
-! Escolha uma opção: 
-\ No newline at end of file
---- 16,19 ----
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+--- 22,28 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Identificador da vacina: Identficador do veterinário a ministrar a vacina: Identificador único do animal: 
-\ No newline at end of file
+! Escolha uma opção: Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal

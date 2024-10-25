@@ -20,24 +20,24 @@ public class Species extends KeyedEntity {
         if (species.contains(this)){
             return 0;
         }
-        int[] common = new int[species.size()];int i = 0;
+        ArrayList<Integer> common = new ArrayList<Integer>(); int i= 0;
         for (Species s: species){
-            common[i] = 0;
+            common.set(i, 0);
             HashMap<Character, Integer> count = new HashMap<Character, Integer>();
             for (Character c: (s.getName()).toCharArray()){
-                count.put(c, count.get(c)+ 1);
+                count.put(c, count.getOrDefault(c, 0)+ 1);
             }
             for (Character c: this.getName().toCharArray()){
-                if (count.get(c) != 0){
-                    common[i] += 1;
+                if (count.getOrDefault(c, 0) != 0){
+                    common.set(i, common.get(i)+ 1);
                     count.put(c, count.get(c)- 1);
                 }
             }
             i += 1;
             int lenBig = compareSizes(s);
-            common[i] = lenBig-common[i];
+            common.set(i, lenBig - common.get(i));
         }
-        return Arrays.stream(common).max().getAsInt(); 
+        return Collections.max(common);
     }
     
 

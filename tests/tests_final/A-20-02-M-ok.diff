@@ -1,5 +1,5 @@
 *** tests/tests_final/A-20-02-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-20-02-M-ok.outhyp	2024-10-25 20:00:42.290533098 +0100
+--- tests/tests_final/A-20-02-M-ok.outhyp	2024-10-25 20:59:01.630910360 +0100
 ***************
 *** 16,22 ****
   3 - Vacinar animal
@@ -13,7 +13,7 @@
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A espécie 'id' não existe.
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A espécie '' não existe.
   Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
