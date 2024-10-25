@@ -24,7 +24,7 @@ public class Vet extends Employee {
 
 
     public void vacinate(Vaccine vac, Animal animal) throws WrongResponsibilityException{
-        if (!(_species.contains(animal.getSpecies()))){throw new WrongResponsibilityException(this.getKey(), animal.getSpecies().getKey())}
+        if (!(_species.contains(animal.getSpecies()))){throw new WrongResponsibilityException(this.getKey(), animal.getSpecies().getKey());}
         VaccineRegistry reg = animal.registerVaccine(this, vac);
         vac.registerVaccine(reg);
         animal.updateHealthState(vac);
@@ -49,4 +49,5 @@ public class Vet extends Employee {
     public void removeSpecies(Species species) {
        _species.remove(species);
     }
+
 }

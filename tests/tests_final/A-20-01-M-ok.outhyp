@@ -16,16 +16,8 @@ Escolha uma opção: Gestão de Vacinas
 3 - Vacinar animal
 4 - Mostrar vacinações
 0 - Sair
-Escolha uma opção: Gestão de Vacinas
-1 - Visualizar todas as vacinas
-2 - Registar vacina
-3 - Vacinar animal
-4 - Mostrar vacinações
-0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Gestão de Vacinas
+Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A espécie 'id' não existe.
+Gestão de Vacinas
 1 - Visualizar todas as vacinas
 2 - Registar vacina
 3 - Vacinar animal
@@ -37,10 +29,14 @@ Escolha uma opção: Gestão de Vacinas
 3 - Vacinar animal
 4 - Mostrar vacinações
 0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Gestão de Vacinas
+Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Gestão de Vacinas
+1 - Visualizar todas as vacinas
+2 - Registar vacina
+3 - Vacinar animal
+4 - Mostrar vacinações
+0 - Sair
+Escolha uma opção: VACINA|Vac2|Nome 2|0
+Gestão de Vacinas
 1 - Visualizar todas as vacinas
 2 - Registar vacina
 3 - Vacinar animal

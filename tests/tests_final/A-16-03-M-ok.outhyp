@@ -17,26 +17,22 @@ Escolha uma opção: Gestão de Funcionários
 4 - Retirar responsabilidade
 5 - Calcular satisfação de funcionário
 0 - Sair
-Escolha uma opção: Gestão de Funcionários
+Escolha uma opção: Identificador único do funcionário: Nome do funcionário: Tipo do funcionário? (VET ou TRT) Registar funcionário: Operação inválida: O funcionário 'id' já existe.
+Gestão de Funcionários
 1 - Visualizar todos os funcionários
 2 - Registar funcionário
 3 - Atribuir responsabilidade
 4 - Retirar responsabilidade
 5 - Calcular satisfação de funcionário
 0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Gestão de Funcionários
+Escolha uma opção: Identificador único do funcionário: Nome do funcionário: Tipo do funcionário? (VET ou TRT) Registar funcionário: Operação inválida: O funcionário 'id' já existe.
+Gestão de Funcionários
 1 - Visualizar todos os funcionários
 2 - Registar funcionário
 3 - Atribuir responsabilidade
 4 - Retirar responsabilidade
 5 - Calcular satisfação de funcionário
 0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
-Escolha uma opção: Número inválido!
 Escolha uma opção: TRT|T1|Trt one
 VET|V1|Vet one
 Gestão de Funcionários

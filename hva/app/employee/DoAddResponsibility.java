@@ -4,6 +4,7 @@ import hva.app.exception.UnknownEmployeeKeyException;
 import hva.app.exception.UnknownHabitatKeyException;
 import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.Hotel;
+import hva.core.enums.Season;
 import hva.core.exception.UnknownEmployeeException;
 import hva.core.exception.UnknownHabitatException;
 import hva.core.exception.UnknownSpeciesException;
@@ -26,7 +27,7 @@ class DoAddResponsibility extends Command<Hotel> {
   @Override
   protected void execute() throws CommandException {
     try{
-    _receiver.addResponsibility(stringField("employee"), stringField("reponsibility"));
+    _receiver.addResponsibility(stringField("employee"), stringField("responsibility"));
   } catch (UnknownEmployeeException ex) {
     throw new UnknownEmployeeKeyException("employee");
   } catch (UnknownHabitatException ex){

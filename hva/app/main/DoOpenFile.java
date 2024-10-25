@@ -5,7 +5,6 @@ import hva.app.exception.FileOpenFailedException;
 import hva.core.exception.UnavailableFileException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
-//FIXME add more imports if needed
 
 /**
  * Command to open a file.
@@ -20,6 +19,9 @@ class DoOpenFile extends Command<HotelManager> {
   protected final void execute() throws CommandException {
     var filename = stringField("filename");
     try {
+      if(_receiver.getChangeState()){
+        
+      }
       _receiver.load(filename);
 
     }catch (UnavailableFileException | ClassNotFoundException ex){

@@ -121,4 +121,12 @@ public class HotelManager implements Serializable {
   public String getFileName() {
     return _filename;
   }
+
+  public void advanceSeason(){
+    _hotel.advanceSeason();
+  }
+
+  public boolean getChangeState() {
+    return _hotel.getChangeState();
+  }
 }

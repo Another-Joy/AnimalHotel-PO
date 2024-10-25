@@ -1,7 +1,7 @@
 *** tests/tests_final/A-01-32-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-01-32-M-ok.outhyp	2024-10-25 08:40:41.970573357 +0100
+--- tests/tests_final/A-01-32-M-ok.outhyp	2024-10-25 16:08:40.874412275 +0100
 ***************
-*** 17,28 ****
+*** 17,26 ****
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
@@ -9,12 +9,10 @@
 ! TRT|T2|Rohit Figueiredo 3|H1,H4
 ! TRT|T3|Rohit Figueiredo 6|H2,H3,H4
 ! TRT|T4|Rohit Figueiredo 7|H1,H2,H3,H4
-! VET|V1|Rohit Figueiredo 2|E1,E2,E3
-! VET|V2|Rohit Figueiredo 4|E3
+  VET|V1|Rohit Figueiredo 2|E1,E2,E3
+  VET|V2|Rohit Figueiredo 4|E3
   VET|V3|Rohit Figueiredo 5
-  VET|V4|Rohit Figueiredo 9
-  Gestão de Funcionários
---- 17,28 ----
+--- 17,26 ----
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
@@ -22,8 +20,6 @@
 ! TRT|T2|Rohit Figueiredo 3
 ! TRT|T3|Rohit Figueiredo 6
 ! TRT|T4|Rohit Figueiredo 7
-! VET|V1|Rohit Figueiredo 2
-! VET|V2|Rohit Figueiredo 4
+  VET|V1|Rohit Figueiredo 2|E1,E2,E3
+  VET|V2|Rohit Figueiredo 4|E3
   VET|V3|Rohit Figueiredo 5
-  VET|V4|Rohit Figueiredo 9
-  Gestão de Funcionários

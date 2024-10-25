@@ -1,33 +1,5 @@
 *** tests/tests_final/A-09-08-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-09-08-M-ok.outhyp	2024-10-25 08:40:43.641570555 +0100
-***************
-*** 42,48 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-! Escolha uma opção: Identificador único do habitat: Nome do habitat: Área do habitat: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 42,59 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-! Escolha uma opção: Gestão de Habitats
-! 1 - Visualizar todos os habitats
-! 2 - Registar habitat
-! 3 - Alterar área de habitat
-! 4 - Alterar influência de habitat sobre espécie
-! 5 - Plantar árvore
-! 6 - Mostrar árvores de habitat
-! 0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Opção inválida!
-! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
+--- tests/tests_final/A-09-08-M-ok.outhyp	2024-10-25 16:08:44.412401153 +0100
 ***************
 *** 68,81 ****
   3 - Transferir para habitat
@@ -44,7 +16,7 @@
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
---- 79,92 ----
+--- 68,81 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair

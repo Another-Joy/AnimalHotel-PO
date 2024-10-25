@@ -144,6 +144,7 @@ public class Hotel implements Serializable {
       throw new DuplicateKeyException(id);
     }
   
+    setChanges(true);
   }
 
 
@@ -288,9 +289,39 @@ public class Hotel implements Serializable {
 
   public void advanceSeason() {
     _season = _season.next();
+    if (_season == null) {throw new NullPointerException("season is null");}
     for (Tree t: _trees.values()){
+      if (_trees.isEmpty()) {throw new NullPointerException("tree is null");}
       t.seasonalUpdate(_season);
     }
   }
+
+  public boolean getChangeState() {
+    return _changes;
+  }
+
+  public void vaccineate(String idVacina, String idVet, String idAnimal) throws UnknownEmployeeException, UnknownVaccineException, UnknownAnimalException, WrongResponsibilityException{
+   
+    if(!_vaccines.containsKey(idVacina)){
+      throw new UnknownVaccineException(idVacina);
+    }
+    Vaccine vaccine = _vaccines.get(idVacina);
+
+    if(!_employees.containsKey(idVet)){
+      throw new UnknownEmployeeException(idVet);
+    }
+    Employee vet = _employees.get(idVet);
+
+    if(!_animals.containsKey(idAnimal)){
+      throw new UnknownAnimalException(idAnimal);
+    }
+    Animal a = _animals.get(idAnimal);
+
+    ((Vet) vet).vacinate(vaccine, a);
+  
+    setChanges(true);
+  }
+
+  
 
 }

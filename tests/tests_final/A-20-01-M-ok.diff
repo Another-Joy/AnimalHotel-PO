@@ -1,7 +1,7 @@
 *** tests/tests_final/A-20-01-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-20-01-M-ok.outhyp	2024-10-25 08:40:45.363567665 +0100
+--- tests/tests_final/A-20-01-M-ok.outhyp	2024-10-25 16:08:48.228389265 +0100
 ***************
-*** 16,43 ****
+*** 16,29 ****
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
@@ -16,49 +16,36 @@
   1 - Visualizar todas as vacinas
   2 - Registar vacina
   3 - Vacinar animal
+--- 16,29 ----
+  3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Gestão de Vacinas
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A espécie 'id' não existe.
+! Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+  3 - Vacinar animal
+***************
+*** 35,42 ****
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
 ! Escolha uma opção: VACINA|Vac1|Nome 1|0|E1
 ! VACINA|Vac2|Nome 2|0|E1,E3
-! Gestão de Vacinas
+  Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
-  3 - Vacinar animal
---- 16,46 ----
+--- 35,41 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-! Escolha uma opção: Gestão de Vacinas
+! Escolha uma opção: VACINA|Vac2|Nome 2|0
+  Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal

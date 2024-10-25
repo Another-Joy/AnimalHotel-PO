@@ -10,11 +10,11 @@ import pt.tecnico.uilib.menus.Command;
 class DoAdvanceSeason extends Command<HotelManager> {
   DoAdvanceSeason(HotelManager receiver) {
     super(Label.ADVANCE_SEASON, receiver);
-    //FIXME add command fields
+    
   }
 
   @Override
   protected final void execute() {
-    //FIXME implement command
+    _receiver.advanceSeason();
   }
 }

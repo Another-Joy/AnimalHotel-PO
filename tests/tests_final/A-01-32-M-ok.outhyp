@@ -21,8 +21,8 @@ Escolha uma opção: TRT|T1|Rohit Figueiredo
 TRT|T2|Rohit Figueiredo 3
 TRT|T3|Rohit Figueiredo 6
 TRT|T4|Rohit Figueiredo 7
-VET|V1|Rohit Figueiredo 2
-VET|V2|Rohit Figueiredo 4
+VET|V1|Rohit Figueiredo 2|E1,E2,E3
+VET|V2|Rohit Figueiredo 4|E3
 VET|V3|Rohit Figueiredo 5
 VET|V4|Rohit Figueiredo 9
 Gestão de Funcionários

@@ -1,33 +1,19 @@
 *** tests/tests_final/A-20-02-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-20-02-M-ok.outhyp	2024-10-25 08:40:45.415567578 +0100
+--- tests/tests_final/A-20-02-M-ok.outhyp	2024-10-25 16:08:48.360388856 +0100
 ***************
-*** 16,28 ****
+*** 16,22 ****
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
 ! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A espécie 'E4' não existe.
-! Gestão de Vacinas
+  Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina
+--- 16,22 ----
   3 - Vacinar animal
   4 - Mostrar vacinações
   0 - Sair
-  Escolha uma opção: Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
---- 16,30 ----
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-! Escolha uma opção: Gestão de Vacinas
-  1 - Visualizar todas as vacinas
-  2 - Registar vacina
-  3 - Vacinar animal
-  4 - Mostrar vacinações
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Gestão de Vacinas
+! Escolha uma opção: Identificador da vacina: Nome da vacina: Identificadores das espécies que podem receber a vacina: Registar vacina: Operação inválida: A espécie 'id' não existe.
+  Gestão de Vacinas
   1 - Visualizar todas as vacinas
   2 - Registar vacina

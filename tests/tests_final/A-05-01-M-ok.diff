@@ -1,53 +1,44 @@
 *** tests/tests_final/A-05-01-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-05-01-M-ok.outhyp	2024-10-25 08:40:42.622572264 +0100
+--- tests/tests_final/A-05-01-M-ok.outhyp	2024-10-25 16:08:42.393407488 +0100
 ***************
-*** 18,25 ****
+*** 18,51 ****
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Alterar influência de habitat sobre espécie: Operação inválida: O habitat 'H1' não existe.
 ! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 18,24 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-! Escolha uma opção: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
-***************
-*** 27,34 ****
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
 ! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Alterar influência de habitat sobre espécie: Operação inválida: A espécie 'C3' não existe.
 ! Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
---- 26,35 ----
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Criar ficheiro
+! 2 - Abrir ficheiro
+! 3 - Guardar ficheiro
+! 4 - Avançar estação do ano
+! 5 - Ver satisfação global
+! 6 - Gestão de animais
+! 7 - Gestão de funcionários
+! 8 - Gestão de habitats
+! 9 - Gestão de vacinas
+! 10 - Consultas
+! 0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 18,21 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Gestão de Habitats
-  1 - Visualizar todos os habitats
-  2 - Registar habitat
-  3 - Alterar área de habitat
-***************
-*** 36,41 ****
---- 37,45 ----
-  5 - Plantar árvore
-  6 - Mostrar árvores de habitat
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Criar ficheiro
-  2 - Abrir ficheiro
+! Escolha uma opção: Identificador único do habitat: Identificador único da espécie: Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Influência (positiva, negativa, neutra: POS, NEG, NEU): Fim de entrada de dados (R-EOF): pt.tecnico.uilib.text.RuntimeEOFException: Fim do fluxo de dados de entrada
