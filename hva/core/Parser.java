@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import hva.core.exception.UnrecognizedEntryException;
-import hva.core.exception.WrongResponsibilityException;
 import hva.core.exception.DuplicateKeyException;
+import hva.core.exception.UnknownEmployeeException;
 import hva.core.exception.UnknownHabitatException;
 import hva.core.exception.UnknownSpeciesException;
 
@@ -79,7 +79,7 @@ public class Parser {
         for(String responsibility : components[3].split(","))
           _hotel.addResponsibility(components[1], responsibility);
       }
-    } catch (DuplicateKeyException|WrongResponsibilityException e) {
+    } catch (DuplicateKeyException | UnknownHabitatException | UnknownSpeciesException | UnknownEmployeeException e) {
       throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
     }
   }
@@ -106,7 +106,7 @@ public class Parser {
       String type = components[5];
 
       _hotel.createTree(id, name, type, age, diff);
-    } catch (DuplicateKeyException|IOException e) {
+    } catch (DuplicateKeyException e) {
       throw new UnrecognizedEntryException("Invalid entry: " + e.getMessage());
     }
   }

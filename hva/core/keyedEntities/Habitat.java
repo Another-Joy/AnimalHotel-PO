@@ -41,4 +41,12 @@ public class Habitat extends KeyedEntity {
         return ((_animals.size()/_area) + _influences.get(animal.getSpecies()).getInt());
     }
 
+    public void setArea(int area) {
+        _area = area;
+    } 
+
+    public void changeInfluence(Species species, Influence influence) {
+        _influences.put(species, influence);
+    }
+
 }

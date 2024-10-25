@@ -1,9 +1,12 @@
 package hva.app.habitat;
 
+import hva.app.exception.UnknownHabitatKeyException;
+import hva.app.exception.UnknownSpeciesKeyException;
 import hva.core.Hotel;
+import hva.core.exception.UnknownHabitatException;
+import hva.core.exception.UnknownSpeciesException;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
-//FIXME add more imports if needed
 
 /**
  * Associate (positive or negatively) a species to a given habitat.
@@ -12,11 +15,19 @@ class DoChangeHabitatInfluence extends Command<Hotel> {
 
   DoChangeHabitatInfluence(Hotel receiver) {
     super(Label.CHANGE_HABITAT_INFLUENCE, receiver);
-    //FIXME add command fields
+    addStringField("idHabitat", Prompt.habitatKey());
+    addStringField("idSpecies", hva.app.animal.Prompt.speciesKey());
+    addOptionField("influence", Prompt.habitatInfluence());
   }
   
   @Override
   protected void execute() throws CommandException {
-    //FIXME implement command
+    try {
+    _receiver.changeHabitatInfluence(stringField("idHabitat"), stringField("idSpecies"), optionField("influence"));
+  } catch (UnknownHabitatException ex) {
+    throw new UnknownHabitatKeyException("idHabitat");
+  } catch (UnknownSpeciesException ex) {
+    throw new UnknownSpeciesKeyException("idSpecies");
   }
+}
 }

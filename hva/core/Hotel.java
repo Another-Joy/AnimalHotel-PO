@@ -1,6 +1,5 @@
 package hva.core;
-import hva.app.exception.UnknownAnimalKeyException;
-import hva.app.exception.UnknownEmployeeKeyException;
+import hva.core.enums.Influence;
 import hva.core.enums.Season;
 import hva.core.exception.*;
 import hva.core.keyedEntities.*;
@@ -153,6 +152,7 @@ public class Hotel implements Serializable {
     if(_habitats.putIfAbsent(id, h) != null){
       throw new DuplicateKeyException(id);
     }
+    setChanges(true);
   }
 
 
@@ -249,5 +249,53 @@ public class Hotel implements Serializable {
     setChanges(true);
   }
 
+  public void setArea(String idHabitat, int area) throws UnknownHabitatException {
+    if(!_habitats.containsKey(idHabitat)){
+      throw new UnknownHabitatException(idHabitat);
+    }
+    Habitat h = _habitats.get(idHabitat);
+
+    h.setArea(area);
+
+    setChanges(true);
+  }
+
+
+  public void changeHabitatInfluence(String habitat, String species, String influence) throws UnknownHabitatException, UnknownSpeciesException{
+    if(!_habitats.containsKey(habitat)){
+      throw new UnknownHabitatException(habitat);
+    }
+    Habitat h = _habitats.get(habitat);
+    if(!_species.containsKey(species)){
+      throw new UnknownHabitatException(species);
+    }
+    Species s = _species.get(species);
+    
+    switch (influence) {
+      case "POS":
+        h.changeInfluence(s, Influence.POS);
+        break;
+      case "NEU":
+        h.changeInfluence(s, Influence.NEU);
+        break;
+      case "NEG":
+        h.changeInfluence(s, Influence.NEG);
+        break;
+
+    }
+    setChanges(true);
+  }
+
+  public void advanceSeason() {
+    switch (_season) {
+      case Season.SPRING:
+        _season = Season.SUMMER;
+        
+        break;
+    
+      default:
+        break;
+    }
+  }
 
 }
