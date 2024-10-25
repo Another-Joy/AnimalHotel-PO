@@ -30,7 +30,7 @@ public class Habitat extends KeyedEntity {
     public String toString(){
         String res =  ("HABITAT|" + super.toString() + "|" + _area + "|" + _trees.size());
         for (Tree t: _trees){
-            res += "/n" + t.toString();
+            res += "\n" + t.toString();
         }
         return res;
     }
