@@ -1,5 +1,5 @@
 *** tests/tests_private/A-01-27B-M-ok.out	2024-10-14 19:28:08.000000000 +0100
---- tests/tests_private/A-01-27B-M-ok.outhyp	2024-10-25 20:58:51.637906652 +0100
+--- tests/tests_private/A-01-27B-M-ok.outhyp	2024-10-25 21:24:59.321999315 +0100
 ***************
 *** 10,16 ****
   9 - Gestão de vacinas
@@ -9,12 +9,11 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 10,17 ----
+--- 10,16 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
-! Escolha uma opção: Guardar antes de fechar? Ficheiro sem nome. Guardar ficheiro como: Ficheiro a abrir: Abrir ficheiro: Operação inválida: Problema ao abrir ficheiro: Erro a processar ficheiro ap02.dat
-! Menu Principal
+! Escolha uma opção: Guardar antes de fechar? Ficheiro sem nome. Guardar ficheiro como: Ficheiro a abrir: Menu Principal
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro

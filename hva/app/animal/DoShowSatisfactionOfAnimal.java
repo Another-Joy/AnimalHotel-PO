@@ -17,10 +17,12 @@ class DoShowSatisfactionOfAnimal extends Command<Hotel> {
   
   @Override
   protected final void execute() throws CommandException {
+    int satis = 0;
     try {
-      _receiver.getAnimalSatisfaction(stringField("animalId"));
+      satis = Math.round(_receiver.getAnimalSatisfaction(stringField("animalId")));
     } catch (UnknownAnimalException ex) {
       throw new UnknownAnimalKeyException(ex.getID());
     }
+    _display.popup(satis);
   }
 }

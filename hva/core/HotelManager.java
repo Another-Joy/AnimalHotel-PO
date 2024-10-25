@@ -125,4 +125,8 @@ public class HotelManager implements Serializable {
   public boolean getChangeState() {
     return _hotel.getChangeState();
   }
+
+  public int getSeason() {
+    return _hotel.getSeason();
+  }
 }

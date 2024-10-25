@@ -19,10 +19,12 @@ class DoShowSatisfactionOfEmployee extends Command<Hotel> {
   
   @Override
   protected void execute() throws CommandException {
+    int satis = 0;
     try {
-      _receiver.getEmployeeSatisfaction(stringField("employeeId"));
+      satis = (int) Math.round(_receiver.getEmployeeSatisfaction(stringField("employeeId")));
     } catch (UnknownEmployeeException ex) {
       throw new UnknownEmployeeKeyException(ex.getID());
     }
+    _display.popup(satis);
   }
 }

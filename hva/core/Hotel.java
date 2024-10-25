@@ -303,6 +303,24 @@ public class Hotel implements Serializable {
     }
   }
 
+  public int getSeason() {
+    int value = 0;
+    switch (_season) {
+      case SPRING:
+        break;
+      case SUMMER:
+        value = 1;
+        break;
+      case FALL:
+        value = 2;
+        break;
+      case WINTER:
+        value = 3;
+        break;
+    }
+    return value;
+  }
+
   public boolean getChangeState() {
     return _changes;
   }
@@ -338,9 +356,9 @@ public class Hotel implements Serializable {
 
 
 
-public float getEmployeeSatisfaction(String stringField) throws UnknownEmployeeException {
+public double getEmployeeSatisfaction(String stringField) throws UnknownEmployeeException {
   Employee e = getEmployee(stringField);
-  return (float) e.calculateSatisfaction();
+  return e.calculateSatisfaction();
 } 
   
 
