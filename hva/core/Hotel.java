@@ -161,6 +161,7 @@ public class Hotel implements Serializable {
     Tree t = createTree(id, name, treeType, age, difficulty);
     h.addTree(t);
     return t;
+    setChanges(true);
   }
 
 
@@ -187,6 +188,7 @@ public class Hotel implements Serializable {
     Tree t = _trees.get(treeId);
     Habitat h = _habitats.get(habitatId);
     h.addTree(t);
+    setChanges(true);
   }
 
 
@@ -313,6 +315,7 @@ public class Hotel implements Serializable {
       }
       _trees.get(k).seasonalUpdate(_season);
     }
+    setChanges(true);
   }
 
   public int getSeason() {
