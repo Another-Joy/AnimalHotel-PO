@@ -25,10 +25,10 @@ public class Species extends KeyedEntity {
             common[i] = 0;
             HashMap<Character, Integer> count = new HashMap<Character, Integer>();
             for (Character c: (s.getName()).toCharArray()){
-                count.put(c, count.get(c)+ 1);
+                count.put(c, count.getOrDefault(c, 0)+ 1);
             }
             for (Character c: this.getName().toCharArray()){
-                if (count.get(c) != 0){
+                if (count.getOrDefault(c, 0) != 0){
                     common[i] += 1;
                     count.put(c, count.get(c)- 1);
                 }
