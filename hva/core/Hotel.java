@@ -242,6 +242,10 @@ public class Hotel implements Serializable {
     return Collections.unmodifiableCollection(_registries);
   }
 
+  public Collection<Tree> showTrees(String hstring) throws UnknownHabitatException{
+    return Collections.unmodifiableCollection(getHabitat(hstring).getTrees());
+  }
+
 
   public boolean getChanges() {return _changes;}
 
@@ -304,21 +308,7 @@ public class Hotel implements Serializable {
   }
 
   public int getSeason() {
-    int value = 0;
-    switch (_season) {
-      case SPRING:
-        break;
-      case SUMMER:
-        value = 1;
-        break;
-      case FALL:
-        value = 2;
-        break;
-      case WINTER:
-        value = 3;
-        break;
-    }
-    return value;
+    return _season.ordinal();
   }
 
   public boolean getChangeState() {

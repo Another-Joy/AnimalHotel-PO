@@ -40,6 +40,10 @@ public class Habitat extends KeyedEntity {
         _trees.add(t);
     }
 
+    public ArrayList<Tree> getTrees(){
+        return _trees;
+    }
+
 
     public float genericAnimalSatisfaction(Animal animal) {      
         return ((_animals.size()/_area) + _influences.getOrDefault(animal.getSpecies(), Influence.NEU).getInt());
