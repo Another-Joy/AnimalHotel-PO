@@ -238,7 +238,7 @@ public class Hotel implements Serializable {
     return Collections.unmodifiableCollection(_employees.values());
   }
 
-  public Collection<VaccineRegistryRegistry> showRegistry() {
+  public Collection<VaccineRegistry> showRegistry() {
     return Collections.unmodifiableCollection(_registries);
   }
 
