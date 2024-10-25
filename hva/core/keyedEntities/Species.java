@@ -10,10 +10,18 @@ public class Species extends KeyedEntity {
     public Species(String key, String name){
         super(key, name);
         _animals = new ArrayList<Animal>();
+        _vets = new ArrayList<Vet>();
     }
 
     public String toString(){
         return ("ESPÉCIE|" + super.toString());
+    }
+
+    public void addVet(Vet vet){
+        _vets.add(vet);
+    }
+    public void removeVet(Vet vet){
+        _vets.remove(vet);
     }
 
     public int calculateDiference(ArrayList<Species> species) {

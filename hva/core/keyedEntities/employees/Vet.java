@@ -44,11 +44,13 @@ public class Vet extends Employee {
 
     public void addSpecies(Species species) {
         _species.add(species);
+        species.addVet(this);
     }
 
 
     public void removeSpecies(Species species) {
        _species.remove(species);
+       species.removeVet(this);
     }
 
 
