@@ -331,10 +331,17 @@ public class Hotel implements Serializable {
     setChanges(true);
   }
 
-  public float getSatisfaction(String animal) throws UnknownAnimalException{
+  public float getAnimalSatisfaction(String animal) throws UnknownAnimalException{
     Animal a = getAnimal(animal);
     return a.getSatisfaction();
-  } 
+  }
+
+
+
+public double getEmployeeSatisfaction(String stringField) throws UnknownEmployeeException {
+  Employee e = getEmployee(stringField);
+  return e.calculateSatisfaction();
+} 
   
 
 }

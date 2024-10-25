@@ -18,7 +18,7 @@ class DoShowSatisfactionOfAnimal extends Command<Hotel> {
   @Override
   protected final void execute() throws CommandException {
     try {
-      _receiver.getSatisfaction(stringField("animalId"));
+      _receiver.getAnimalSatisfaction(stringField("animalId"));
     } catch (UnknownAnimalException ex) {
       throw new UnknownAnimalKeyException(ex.getID());
     }
