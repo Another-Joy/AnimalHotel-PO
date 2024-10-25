@@ -1,6 +1,7 @@
 package hva.core.keyedEntities.employees;
 import java.util.ArrayList;
 
+import hva.core.exception.WrongResponsibilityException;
 import hva.core.keyedEntities.Animal;
 import hva.core.keyedEntities.Species;
 import hva.core.keyedEntities.Vaccine;
@@ -22,7 +23,8 @@ public class Vet extends Employee {
     }
 
 
-    public void vacinate(Vaccine vac, Animal animal){
+    public void vacinate(Vaccine vac, Animal animal) throws WrongResponsibilityException{
+        if (!(_species.contains(animal.getSpecies()))){throw new WrongResponsibilityException(this.getKey(), animal.getSpecies().getKey())}
         VaccineRegistry reg = animal.registerVaccine(this, vac);
         vac.registerVaccine(reg);
         animal.updateHealthState(vac);
