@@ -1,5 +1,5 @@
 *** tests/tests_final/A-21-05-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-21-05-M-ok.outhyp	2024-10-25 17:18:33.330203402 +0100
+--- tests/tests_final/A-21-05-M-ok.outhyp	2024-10-25 20:00:42.748532256 +0100
 ***************
 *** 16,44 ****
   3 - Vacinar animal

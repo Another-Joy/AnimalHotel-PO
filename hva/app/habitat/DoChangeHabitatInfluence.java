@@ -17,7 +17,7 @@ class DoChangeHabitatInfluence extends Command<Hotel> {
     super(Label.CHANGE_HABITAT_INFLUENCE, receiver);
     addStringField("idHabitat", Prompt.habitatKey());
     addStringField("idSpecies", hva.app.animal.Prompt.speciesKey());
-    addOptionField("influence", Prompt.habitatInfluence());
+    addOptionField("influence",  Prompt.habitatInfluence(),"POS", "NEG", "NEU");
   }
   
   @Override

@@ -1,7 +1,7 @@
 *** tests/tests_final/A-09-03-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-09-03-M-ok.outhyp	2024-10-25 17:18:28.823212646 +0100
+--- tests/tests_final/A-09-03-M-ok.outhyp	2024-10-25 20:00:38.098540966 +0100
 ***************
-*** 16,36 ****
+*** 16,28 ****
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
@@ -15,33 +15,17 @@
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
+--- 16,28 ----
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: ANIMAL|a2|animal 2|C10|VOID|h1
-! Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
-  3 - Transferir para habitat
---- 16,36 ----
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único do habitat: Identificador único da espécie: Registar animal: Operação inválida: A espécie 'id' não existe.
-! Gestão de Animais
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único do habitat: Identificador único da espécie: Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único do habitat: Identificador único da espécie: Registar animal: Operação inválida: A espécie 'id' não existe.
+! Escolha uma opção: Identificador único do animal: Nome do animal: Identificador único do habitat: Identificador único da espécie: Registar animal: Operação inválida: O animal 'a2' já existe.
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
-  3 - Transferir para habitat
-  4 - Calcular satisfação de animal
-  0 - Sair
-! Escolha uma opção: Gestão de Animais
-  1 - Visualizar todos os animais
-  2 - Registar animal
-  3 - Transferir para habitat
