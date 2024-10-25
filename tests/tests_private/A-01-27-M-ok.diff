@@ -1,5 +1,5 @@
 *** tests/tests_private/A-01-27-M-ok.out	2024-10-14 19:28:08.000000000 +0100
---- tests/tests_private/A-01-27-M-ok.outhyp	2024-10-25 07:48:26.524517249 +0100
+--- tests/tests_private/A-01-27-M-ok.outhyp	2024-10-25 08:48:42.097709858 +0100
 ***************
 *** 10,16 ****
   9 - Gestão de vacinas

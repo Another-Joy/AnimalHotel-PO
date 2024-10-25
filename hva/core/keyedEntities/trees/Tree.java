@@ -11,14 +11,16 @@ public abstract class Tree extends KeyedEntity{
     private int _seasonalEffort;
     private LeafState _leafState;
 
-    public Tree(String key, String name, Season season, int cleaningDifficulty){
+    public Tree(String key, String name, int age ,Season season, int cleaningDifficulty){
         super(key, name);
-        _age = 0;
+        _age = age;
         _agingSeason = season;
         _cleaningDifficulty = cleaningDifficulty;
         _seasonalEffort = getCleaningEffort(season);
         _leafState = getLeafState(season);
     }
+
+
 
     abstract void seasonalUpdate(Season season);
 

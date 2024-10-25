@@ -2,7 +2,6 @@ package hva.core.keyedEntities.employees;
 import java.util.ArrayList;
 
 import hva.core.keyedEntities.Animal;
-import hva.core.keyedEntities.Habitat;
 import hva.core.keyedEntities.Species;
 import hva.core.keyedEntities.Vaccine;
 import hva.core.keyedEntities.VaccineRegistry;
@@ -40,4 +39,12 @@ public class Vet extends Employee {
         return ("|" + s.substring(1));
     }
 
+    public void addSpecies(Species species) {
+        _species.add(species);
+    }
+
+
+    public void removeSpecies(Species species) {
+       _species.remove(species);
+    }
 }

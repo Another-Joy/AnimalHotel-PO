@@ -1,4 +1,6 @@
 package hva.core;
+import hva.app.exception.UnknownAnimalKeyException;
+import hva.app.exception.UnknownEmployeeKeyException;
 import hva.core.enums.Season;
 import hva.core.exception.*;
 import hva.core.keyedEntities.*;
@@ -22,6 +24,7 @@ public class Hotel implements Serializable {
   private LinkedHashMap<String, Employee> _employees;
   private LinkedHashMap<String, Vaccine> _vaccines;
   private ArrayList<VaccineRegistry> _registries;
+  private boolean _changes;
   
 
   public Hotel(){
@@ -54,6 +57,33 @@ public class Hotel implements Serializable {
     p.parseFile(filename);
   }
 
+  public Animal getAnimal(String idAnimal)throws UnknownAnimalException{
+    if (!_animals.containsKey(idAnimal)){
+      throw new UnknownAnimalException(idAnimal);
+    }
+    return _animals.get(idAnimal);
+  }
+  public Habitat getHabitat(String idHabitat)throws UnknownHabitatException{
+    if (!_habitats.containsKey(idHabitat)){
+      throw new UnknownHabitatException(idHabitat);
+    }
+    return _habitats.get(idHabitat);
+  }
+  public Employee getEmployee(String idEmployee)throws UnknownEmployeeException{
+    if (!_employees.containsKey(idEmployee)){
+      throw new UnknownEmployeeException(idEmployee);
+    }
+    return _employees.get(idEmployee);
+  }
+  public Vaccine getVaccine(String idVaccine)throws UnknownVaccineException{
+    if (!_vaccines.containsKey(idVaccine)){
+      throw new UnknownVaccineException(idVaccine);
+    }
+    return _vaccines.get(idVaccine);
+  }
+
+
+
   public void registerAnimal(String id, String name, String habitatId, String speciesId) throws UnknownSpeciesException, UnknownHabitatException, DuplicateKeyException{
     Species s = _species.get(speciesId);
     Habitat h = _habitats.get(habitatId);
@@ -67,7 +97,7 @@ public class Hotel implements Serializable {
     if (_animals.putIfAbsent(id, a) != null){
       throw new DuplicateKeyException(id);
     }
-
+    setChanges(true);
   }
 
 
@@ -96,7 +126,7 @@ public class Hotel implements Serializable {
       throw new DuplicateKeyException(id);
     }
 
-      // throw new UnsupportedOperationException("Unimplemented method 'registerEmployee'");
+      setChanges(true);
   }
 
 
@@ -126,20 +156,22 @@ public class Hotel implements Serializable {
   }
 
 
-  public void createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateKeyException, IOException{
+  public void createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateKeyException{
     Tree t = null;
     switch (treeType) {
       case "CADUCA":
-        t = new DeciduousTree(id, name, _season, difficulty);
+        t = new DeciduousTree(id, name, age, _season, difficulty);
         break;
       case "PERENE":
-        t = new EvergreenTree(id, name, _season, difficulty);
-      default:
-        throw new IOException("Wrong Type");
+        t = new EvergreenTree(id, name, age, _season, difficulty);
+      
+        
     }
     if(_trees.putIfAbsent(id, t) != null){
       throw new DuplicateKeyException(id);
     }
+
+    setChanges(true);
   }
 
   public void plantTree(String treeId, String habitatId){
@@ -150,18 +182,41 @@ public class Hotel implements Serializable {
 
 
 
-  public void addResponsibility(String employee, String responsibility) throws WrongResponsibilityException {
+  public void addResponsibility(String employee, String responsibility) throws UnknownEmployeeException, UnknownSpeciesException, UnknownHabitatException {
+    if(!_employees.containsKey(employee)){
+      throw new UnknownEmployeeException(employee);
+    }
     Employee e = _employees.get(employee);
     if (e instanceof Vet){
       Species s = _species.get(responsibility);
-      if (s == null){ throw new WrongResponsibilityException(employee, responsibility);}
+      if (s == null){ throw new UnknownSpeciesException(responsibility);}
+      ((Vet) e).addSpecies(s);
     }
     else if (e instanceof Keeper){
       Habitat h = _habitats.get(responsibility);
-      if (h == null){ throw new WrongResponsibilityException(employee, responsibility);}
+      if (h == null){ throw new UnknownHabitatException(responsibility);}
+      ((Keeper) e).addHabitat(h);
     }
+    setChanges(true);
   }
 
+  public void removeResponsibility(String employee, String responsibility) throws UnknownEmployeeException, UnknownSpeciesException, UnknownHabitatException {
+    if(!_employees.containsKey(employee)){
+    throw new UnknownEmployeeException(employee);
+  }
+  Employee e = _employees.get(employee);
+  if (e instanceof Vet){
+    Species s = _species.get(responsibility);
+    if (s == null){ throw new UnknownSpeciesException(responsibility);}
+    ((Vet) e).removeSpecies(s);
+  }
+  else if (e instanceof Keeper){
+    Habitat h = _habitats.get(responsibility);
+    if (h == null){ throw new UnknownHabitatException(responsibility);}
+    ((Keeper) e).removeHabitat(h);
+  }
+  setChanges(true);
+  }
 
   public Collection<Animal> showAnimals() {
     return Collections.unmodifiableCollection(_animals.values());
@@ -183,37 +238,15 @@ public class Hotel implements Serializable {
   }
 
 
+  public boolean getChanges() {return _changes;}
 
-  public String show(String type){
-    String s = new String();
-    switch (type) {
-      case "Animals":
-        for (Animal a : _animals.values()){
-          s = s + a.toString() + "\n";
-        }
-        break;      
-      case "Vaccines":
-        for (Vaccine v : _vaccines.values()){
-          s = s + v.toString() + "\n";
-        }      
-        break;
-      case "Employees":
-        for (Employee e : _employees.values()){
-          s = s + e.toString() + "\n";
-        }
-        break;  
-      case "Habitats":
-        for (Habitat h : _habitats.values()){
-          s = s + h.toString() + "\n";
-        }
-        break;
-      default:
-        break;
-    }
-    if (s.length()>0){
-      return s.substring(0, s.length()-1);
-    }
-    return s;
+  public void setChanges(boolean changes) {_changes = changes;}
+
+  public void transferAnimal(String idAnimal,String idHabitat) throws UnknownAnimalException, UnknownHabitatException {
+    
+    getAnimal(idAnimal).changeHabitat(getHabitat(idHabitat));
+
+    setChanges(true);
   }
 
 

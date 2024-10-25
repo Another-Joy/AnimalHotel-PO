@@ -29,4 +29,13 @@ public class Keeper extends Employee{
         }
         return ("|" + s.substring(1));
     }
+
+    public void addHabitat(Habitat habitat) {
+        _habitats.add(habitat);
+    }
+
+
+    public void removeHabitat(Habitat habitat) {
+        _habitats.remove(habitat);
+    }
 }

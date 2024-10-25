@@ -5,8 +5,8 @@ import hva.core.enums.Season;
 
 public class EvergreenTree extends Tree {
 
-    public EvergreenTree(String key, String name, Season season, int cleaningDifficulty) {
-        super(key, name, season, cleaningDifficulty);
+    public EvergreenTree(String key, String name, int age, Season season, int cleaningDifficulty) {
+        super(key, name, age, season, cleaningDifficulty);
     }
 
     @Override

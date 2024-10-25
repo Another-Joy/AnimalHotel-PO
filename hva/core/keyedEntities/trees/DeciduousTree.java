@@ -5,8 +5,8 @@ import hva.core.enums.Season;
 
 public class DeciduousTree extends Tree{
 
-    public DeciduousTree(String key, String name, Season season, int cleaningDifficulty) {
-        super(key, name, season, cleaningDifficulty);
+    public DeciduousTree(String key, String name, int age, Season season, int cleaningDifficulty) {
+        super(key, name, age, season, cleaningDifficulty);
     }
 
     @Override
