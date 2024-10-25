@@ -1,5 +1,7 @@
 package hva.app.animal;
 
+import java.util.stream.Collectors;
+
 import hva.core.Hotel;
 import pt.tecnico.uilib.menus.Command;
 //FIXME add more imports if needed
@@ -16,6 +18,6 @@ class DoShowAllAnimals extends Command<Hotel> {
   @Override
   protected final void execute() {
     //FIXME implement command
-    _display.popup(_receiver.show("Animals"));
+    _display.popup(_receiver.showAnimals().stream().sorted().collect(Collectors.toList()));
   }
 }

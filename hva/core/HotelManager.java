@@ -68,7 +68,7 @@ public class HotelManager implements Serializable {
    * @throws UnavailableFileException if the specified file does not exist or there is
    *         an error while processing this file.
    **/
-  public void load(String filename) throws UnavailableFileException {
+  public void load(String filename) throws UnavailableFileException, ClassNotFoundException {
     // FIXME implement serialization method
     try {
       // Read the serialized object from the file
@@ -76,19 +76,17 @@ public class HotelManager implements Serializable {
       ObjectInputStream in = new ObjectInputStream(fileIn);
 
       // Deserialize the object
-      // _hotel = (Hotel) in.readObject();
-      // in.close();
-      // fileIn.close();
+      _hotel = (Hotel) in.readObject();
+      in.close();
+      fileIn.close();
 
       // System.out.println("Deserialized Person: " + person);
-  } catch (FileNotFoundException f) {
-      f.printStackTrace();
-  } catch (IOException i) {
-      i.printStackTrace();
+    } catch (IOException i) {
+      throw new UnavailableFileException(filename);
   // } catch (ClassNotFoundException e) {
     // TODO Auto-generated catch block
     // e.printStackTrace();
-  }
+    }
   }
   
   /**

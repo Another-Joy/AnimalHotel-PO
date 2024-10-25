@@ -1,5 +1,5 @@
 *** tests/tests_public/A-01-22-M-ok.out	2024-10-09 09:12:10.000000000 +0100
---- tests/tests_public/A-01-22-M-ok.outhyp	2024-10-25 03:56:18.806856691 +0100
+--- tests/tests_public/A-01-22-M-ok.outhyp	2024-10-25 05:18:38.493915018 +0100
 ***************
 *** 18,24 ****
   4 - Mostrar vacinações

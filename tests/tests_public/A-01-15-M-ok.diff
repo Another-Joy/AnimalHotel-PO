@@ -1,5 +1,5 @@
 *** tests/tests_public/A-01-15-M-ok.out	2024-10-09 09:12:10.000000000 +0100
---- tests/tests_public/A-01-15-M-ok.outhyp	2024-10-25 03:56:18.353914298 +0100
+--- tests/tests_public/A-01-15-M-ok.outhyp	2024-10-25 05:18:37.979917114 +0100
 ***************
 *** 19,25 ****
   5 - Calcular satisfação de funcionário

@@ -1,8 +1,6 @@
 package hva.core.keyedEntities;
 import java.util.ArrayList;
 
-import hva.core.keyedEntities.employees.Vet;
-
 public class Vaccine extends KeyedEntity{
     private ArrayList<Species> _species;
     private ArrayList<VaccineRegistry> _registry;
@@ -13,6 +11,7 @@ public class Vaccine extends KeyedEntity{
         _registry = new ArrayList<VaccineRegistry>();
     }
 
+    @Override
     public String toString() {
         return ("VACINA|" + super.toString() + "|" + _registry.size() +"|"+ printSpecies());
     }

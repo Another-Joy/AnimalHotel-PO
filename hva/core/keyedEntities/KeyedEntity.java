@@ -2,7 +2,7 @@ package hva.core.keyedEntities;
 
 import java.io.Serializable;
 
-public abstract class KeyedEntity implements Serializable{
+public abstract class KeyedEntity implements Serializable, Comparable<KeyedEntity>{
     private final String _key;
     private final String _name;
 
@@ -21,5 +21,10 @@ public abstract class KeyedEntity implements Serializable{
 
     public String toString(){
         return (_key + "|" + _name);
+    }
+
+    @Override
+    public int compareTo(KeyedEntity entity2) {
+        return getKey().compareToIgnoreCase(entity2.getKey());
     }
 }

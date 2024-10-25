@@ -1,0 +1,35 @@
+*** tests/tests_private/A-01-20-M-ok.out	2024-10-14 19:28:08.000000000 +0100
+--- tests/tests_private/A-01-20-M-ok.outhyp	2024-10-25 05:53:56.082628649 +0100
+***************
+*** 17,31 ****
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: TRT|a24|Rohit Figueiredo
+! VET|A25|Rohit Figueiredo 2
+! TRT|A34|Rohit Figueiredo 3
+! VET|a85|Rohit Figueiredo 4
+! VET|a95|Rohit Figueiredo 5
+! TRT|B24|Rohit Figueiredo 6
+! TRT|d24|Rohit Figueiredo 7
+! TRT|x24|Rohit Figueiredo 8
+! VET|X25|Rohit Figueiredo 9
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+--- 17,31 ----
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: TRT|a24|Rohit Figueiredo|VOID
+! VET|A25|Rohit Figueiredo 2|VOID
+! TRT|A34|Rohit Figueiredo 3|VOID
+! VET|a85|Rohit Figueiredo 4|VOID
+! VET|a95|Rohit Figueiredo 5|VOID
+! TRT|B24|Rohit Figueiredo 6|VOID
+! TRT|d24|Rohit Figueiredo 7|VOID
+! TRT|x24|Rohit Figueiredo 8|VOID
+! VET|X25|Rohit Figueiredo 9|VOID
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário

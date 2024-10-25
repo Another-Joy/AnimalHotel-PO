@@ -1,0 +1,19 @@
+*** tests/tests_private/A-01-22-M-ok.out	2024-10-14 19:28:08.000000000 +0100
+--- tests/tests_private/A-01-22-M-ok.outhyp	2024-10-25 05:53:56.194626770 +0100
+***************
+*** 16,22 ****
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: VACINA|V3|Tétano|0
+  Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina
+--- 16,22 ----
+  3 - Vacinar animal
+  4 - Mostrar vacinações
+  0 - Sair
+! Escolha uma opção: VACINA|V3|Tétano|0||VOID
+  Gestão de Vacinas
+  1 - Visualizar todas as vacinas
+  2 - Registar vacina

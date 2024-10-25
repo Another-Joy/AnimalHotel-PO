@@ -163,7 +163,26 @@ public class Hotel implements Serializable {
   }
 
 
-  
+  public Collection<Animal> showAnimals() {
+    return Collections.unmodifiableCollection(_animals.values());
+  }
+
+
+  public Collection<Habitat> showHabitats() {
+    return Collections.unmodifiableCollection(_habitats.values());
+  }
+
+
+  public Collection<Vaccine> showVaccines() {
+    return Collections.unmodifiableCollection(_vaccines.values());
+  }
+
+
+  public Collection<Employee> showEmployees() {
+    return Collections.unmodifiableCollection(_employees.values());
+  }
+
+
 
   public String show(String type){
     String s = new String();
@@ -191,7 +210,10 @@ public class Hotel implements Serializable {
       default:
         break;
     }
-    return s.substring(0, s.length()-1);
+    if (s.length()>0){
+      return s.substring(0, s.length()-1);
+    }
+    return s;
   }
 
 

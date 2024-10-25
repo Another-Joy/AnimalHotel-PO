@@ -22,7 +22,7 @@ class DoSaveFile extends Command<HotelManager> {
   protected final void execute() throws CommandException{
      try{
       String fileName = _receiver.getFileName();
-      if(fileName.isEmpty()) {
+      if(fileName == null) {
         _receiver.saveAs(Form.requestString(Prompt.newSaveAs()));
       }
       _receiver.save();

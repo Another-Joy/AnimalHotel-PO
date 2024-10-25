@@ -1,5 +1,5 @@
 *** tests/tests_final/A-07-03-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-07-03-M-ok.outhyp	2024-10-25 03:51:25.812477006 +0100
+--- tests/tests_final/A-07-03-M-ok.outhyp	2024-10-25 05:22:13.698543927 +0100
 ***************
 *** 18,24 ****
   5 - Plantar árvore
@@ -18,12 +18,21 @@
   2 - Registar habitat
   3 - Alterar área de habitat
 ***************
-*** 26,50 ****
+*** 26,32 ****
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
 ! Escolha uma opção: Identificador único do habitat: Identificador único da árvore: Nome da árvore: Idade da árvore: Dificuldade de limpeza da árvore: Tipo de árvore: (CADUCA ou PERENE) Plantar árvore: Operação inválida: O habitat 'hh' não existe.
-! Gestão de Habitats
+  Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+--- 26,51 ----
+  5 - Plantar árvore
+  6 - Mostrar árvores de habitat
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Gestão de Habitats
 ! 1 - Visualizar todos os habitats
 ! 2 - Registar habitat
 ! 3 - Alterar área de habitat
@@ -31,25 +40,52 @@
 ! 5 - Plantar árvore
 ! 6 - Mostrar árvores de habitat
 ! 0 - Sair
-! Escolha uma opção: Menu Principal
-! 1 - Criar ficheiro
-! 2 - Abrir ficheiro
-! 3 - Guardar ficheiro
-! 4 - Avançar estação do ano
-! 5 - Ver satisfação global
-! 6 - Gestão de animais
-! 7 - Gestão de funcionários
-! 8 - Gestão de habitats
-! 9 - Gestão de vacinas
-! 10 - Consultas
+! Escolha uma opção: Gestão de Habitats
+! 1 - Visualizar todos os habitats
+! 2 - Registar habitat
+! 3 - Alterar área de habitat
+! 4 - Alterar influência de habitat sobre espécie
+! 5 - Plantar árvore
+! 6 - Mostrar árvores de habitat
 ! 0 - Sair
-  Escolha uma opção: 
-\ No newline at end of file
---- 26,31 ----
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Opção inválida!
+  Gestão de Habitats
+  1 - Visualizar todos os habitats
+  2 - Registar habitat
+***************
+*** 35,40 ****
+--- 54,86 ----
   5 - Plantar árvore
   6 - Mostrar árvores de habitat
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-  Escolha uma opção: 
-\ No newline at end of file
++ Escolha uma opção: Opção inválida!
++ Gestão de Habitats
++ 1 - Visualizar todos os habitats
++ 2 - Registar habitat
++ 3 - Alterar área de habitat
++ 4 - Alterar influência de habitat sobre espécie
++ 5 - Plantar árvore
++ 6 - Mostrar árvores de habitat
++ 0 - Sair
++ Escolha uma opção: Opção inválida!
++ Gestão de Habitats
++ 1 - Visualizar todos os habitats
++ 2 - Registar habitat
++ 3 - Alterar área de habitat
++ 4 - Alterar influência de habitat sobre espécie
++ 5 - Plantar árvore
++ 6 - Mostrar árvores de habitat
++ 0 - Sair
++ Escolha uma opção: Gestão de Habitats
++ 1 - Visualizar todos os habitats
++ 2 - Registar habitat
++ 3 - Alterar área de habitat
++ 4 - Alterar influência de habitat sobre espécie
++ 5 - Plantar árvore
++ 6 - Mostrar árvores de habitat
++ 0 - Sair
++ Escolha uma opção: Número inválido!
+  Escolha uma opção: Menu Principal
+  1 - Criar ficheiro
+  2 - Abrir ficheiro

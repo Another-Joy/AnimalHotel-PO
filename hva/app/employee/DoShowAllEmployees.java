@@ -1,5 +1,7 @@
 package hva.app.employee;
 
+import java.util.stream.Collectors;
+
 import hva.core.Hotel;
 import pt.tecnico.uilib.menus.Command;
 //FIXME add more imports if needed
@@ -16,6 +18,6 @@ class DoShowAllEmployees extends Command<Hotel> {
   @Override
   protected void execute() {
     //FIXME implement command
-    _display.popup(_receiver.show("Employees"));
+    _display.popup(_receiver.showEmployees().stream().sorted().collect(Collectors.toList()));
   }
 }

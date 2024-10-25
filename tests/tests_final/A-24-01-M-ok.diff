@@ -1,5 +1,5 @@
 *** tests/tests_final/A-24-01-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-24-01-M-ok.outhyp	2024-10-25 03:51:32.499693890 +0100
+--- tests/tests_final/A-24-01-M-ok.outhyp	2024-10-25 05:22:21.012546707 +0100
 ***************
 *** 16,34 ****
   3 - Actos médicos de um veterinário

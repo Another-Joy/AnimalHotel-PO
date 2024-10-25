@@ -1,6 +1,7 @@
 package hva.app.animal;
 
 import hva.core.Hotel;
+import pt.tecnico.uilib.forms.Form;
 import pt.tecnico.uilib.menus.Command;
 import pt.tecnico.uilib.menus.CommandException;
 //FIXME add more imports if needed
@@ -17,6 +18,7 @@ class DoTransferToHabitat extends Command<Hotel> {
   
   @Override
   protected final void execute() throws CommandException {
-    //FIXME implement command
+    // _receiver.getA.get(Form.requestString(addStringField(null, null);)))
+    // _display.popup();
   }
 }

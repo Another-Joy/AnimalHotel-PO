@@ -1,0 +1,19 @@
+*** tests/tests_private/A-01-31-M-ok.out	2024-10-14 19:28:08.000000000 +0100
+--- tests/tests_private/A-01-31-M-ok.outhyp	2024-10-25 05:53:56.886615161 +0100
+***************
+*** 42,48 ****
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: VET|A1|Rohit Figueiredo 2
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
+--- 42,48 ----
+  4 - Retirar responsabilidade
+  5 - Calcular satisfação de funcionário
+  0 - Sair
+! Escolha uma opção: VET|A1|Rohit Figueiredo 2|VOID
+  Gestão de Funcionários
+  1 - Visualizar todos os funcionários
+  2 - Registar funcionário
