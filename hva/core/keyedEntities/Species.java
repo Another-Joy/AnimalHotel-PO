@@ -33,9 +33,9 @@ public class Species extends KeyedEntity {
                     count.put(c, count.get(c)- 1);
                 }
             }
-            i += 1;
             int lenBig = compareSizes(s);
             common[i] = lenBig-common[i];
+            i += 1;
         }
         return Arrays.stream(common).max().getAsInt(); 
     }
