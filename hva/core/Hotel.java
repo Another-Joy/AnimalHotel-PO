@@ -156,8 +156,14 @@ public class Hotel implements Serializable {
     setChanges(true);
   }
 
+  public void plantTree(String hId, String id, String name, String treeType, int age, int difficulty) throws UnknownHabitatException, DuplicateKeyException {
+    Habitat h = getHabitat(hId);
+    Tree t = createTree(id, name, treeType, age, difficulty);
+    h.addTree(t);
+  }
 
-  public void createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateKeyException{
+
+  public Tree createTree(String id, String name, String treeType, int age, int difficulty) throws DuplicateKeyException{
     Tree t = null;
     switch (treeType) {
       case "CADUCA":
@@ -173,6 +179,7 @@ public class Hotel implements Serializable {
     }
 
     setChanges(true);
+    return t;
   }
 
   public void plantTree(String treeId, String habitatId){

@@ -13,7 +13,8 @@ class DoAddTreeToHabitat extends Command<Hotel> {
 
   DoAddTreeToHabitat(Hotel receiver) {
     super(Label.ADD_TREE_TO_HABITAT, receiver);
-    addStringField("id", Prompt.treeKey());
+    addStringField("hid", Prompt.habitatKey());
+    addStringField("tid", Prompt.treeKey());
     addStringField("name", Prompt.treeName());
     addStringField("treeType", Prompt.treeType());
     addIntegerField("age", Prompt.treeAge());
@@ -23,7 +24,7 @@ class DoAddTreeToHabitat extends Command<Hotel> {
   @Override
   protected void execute() throws CommandException {
     try{
-    _receiver.createTree(stringField("id"), stringField("name"), stringField("treeType"), integerField("age"), integerField("dificulty"));
+    _receiver.plantTree(stringField("hid"), (stringField("tid"), stringField("name"), stringField("treeType"), integerField("age"), integerField("dificulty"));
     } catch (DuplicateKeyException ex) {
       throw new DuplicateTreeKeyException(ex.getID());
     }
