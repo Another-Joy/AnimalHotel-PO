@@ -19,7 +19,7 @@ public class Vet extends Employee {
 
 
     public String toString(){
-        return ("VET|" + super.toString() + printResponsibilities());
+        return String.format("VET|%s|%s%s",super.getKey(),super.getName(), printResponsibilities());
     }
 
 
@@ -32,7 +32,7 @@ public class Vet extends Employee {
 
 
     private String printResponsibilities(){
-        if (_species.isEmpty()){return ("|VOID");}
+        if (_species.isEmpty()){return ("");}
         String s = new String();
         for (Species species: _species){
             s = s + "," + species.getKey();

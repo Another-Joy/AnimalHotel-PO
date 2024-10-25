@@ -62,10 +62,10 @@ Escolha uma opção: Gestão de Funcionários
 0 - Sair
 Escolha uma opção: Número inválido!
 Escolha uma opção: Número inválido!
-Escolha uma opção: TRT|T1|Trt one|VOID
-TRT|T2|Trt two|VOID
-VET|V1|Vet one|VOID
-VET|V2|Vet two|VOID
+Escolha uma opção: TRT|T1|Trt one
+TRT|T2|Trt two
+VET|V1|Vet one
+VET|V2|Vet two
 Gestão de Funcionários
 1 - Visualizar todos os funcionários
 2 - Registar funcionário
@@ -109,10 +109,10 @@ Escolha uma opção: Gestão de Funcionários
 0 - Sair
 Escolha uma opção: Número inválido!
 Escolha uma opção: Número inválido!
-Escolha uma opção: TRT|T1|Trt one|VOID
-TRT|T2|Trt two|VOID
-VET|V1|Vet one|VOID
-VET|V2|Vet two|VOID
+Escolha uma opção: TRT|T1|Trt one
+TRT|T2|Trt two
+VET|V1|Vet one
+VET|V2|Vet two
 Gestão de Funcionários
 1 - Visualizar todos os funcionários
 2 - Registar funcionário

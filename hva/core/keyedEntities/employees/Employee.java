@@ -8,8 +8,5 @@ public abstract class Employee extends KeyedEntity {
         super(key, name);
     }
     
-    public String toString(){
-        return super.toString();
-    }
-
+    public abstract String toString();
 }

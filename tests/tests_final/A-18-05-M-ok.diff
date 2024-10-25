@@ -1,21 +1,19 @@
 *** tests/tests_final/A-18-05-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-18-05-M-ok.outhyp	2024-10-25 05:22:18.253545557 +0100
+--- tests/tests_final/A-18-05-M-ok.outhyp	2024-10-25 07:48:30.611531351 +0100
 ***************
-*** 17,24 ****
-  4 - Retirar responsabilidade
+*** 18,24 ****
   5 - Calcular satisfação de funcionário
   0 - Sair
-! Escolha uma opção: TRT|T1|Trt one
+  Escolha uma opção: TRT|T1|Trt one
 ! VET|V1|Vet one|C1,C2
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário
---- 17,24 ----
-  4 - Retirar responsabilidade
+--- 18,24 ----
   5 - Calcular satisfação de funcionário
   0 - Sair
-! Escolha uma opção: TRT|T1|Trt one|VOID
-! VET|V1|Vet one|VOID
+  Escolha uma opção: TRT|T1|Trt one
+! VET|V1|Vet one
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário
@@ -31,7 +29,7 @@
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-! Escolha uma opção: TRT|T1|Trt one
+  Escolha uma opção: TRT|T1|Trt one
 ! VET|V1|Vet one|C1
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
@@ -47,10 +45,10 @@
   4 - Retirar responsabilidade
   5 - Calcular satisfação de funcionário
   0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: TRT|T1|Trt one|VOID
-! VET|V1|Vet one|VOID
++ Escolha uma opção: Número inválido!
++ Escolha uma opção: Número inválido!
+  Escolha uma opção: TRT|T1|Trt one
+! VET|V1|Vet one
   Gestão de Funcionários
   1 - Visualizar todos os funcionários
   2 - Registar funcionário

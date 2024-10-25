@@ -33,7 +33,7 @@ public class HotelManager implements Serializable {
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
     try {
       // Create a file to save the serialized object
-      FileOutputStream fileOut = new FileOutputStream(_filename + ".ser");
+      FileOutputStream fileOut = new FileOutputStream(_filename);
       ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
       // Serialize the object
@@ -74,12 +74,12 @@ public class HotelManager implements Serializable {
       // Read the serialized object from the file
       FileInputStream fileIn = new FileInputStream(filename);
       ObjectInputStream in = new ObjectInputStream(fileIn);
-
+ 
       // Deserialize the object
       _hotel = (Hotel) in.readObject();
+ 
       in.close();
       fileIn.close();
-
       // System.out.println("Deserialized Person: " + person);
     } catch (IOException i) {
       throw new UnavailableFileException(filename);
@@ -98,6 +98,10 @@ public class HotelManager implements Serializable {
    * import file.
    **/
   public void importFile(String filename) throws ImportFileException {
+    File file = new File(filename);
+    if(!file.exists() || file.length() == 0) {
+      throw new ImportFileException(filename);
+    }
     try {
       _hotel.importFile(filename);
     } catch (IOException | UnrecognizedEntryException e) {

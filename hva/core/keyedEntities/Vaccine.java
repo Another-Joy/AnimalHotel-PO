@@ -13,16 +13,16 @@ public class Vaccine extends KeyedEntity{
 
     @Override
     public String toString() {
-        return ("VACINA|" + super.toString() + "|" + _registry.size() +"|"+ printSpecies());
+        return ("VACINA|" + super.toString() + "|" + _registry.size() + printSpecies());
     }
 
     private String printSpecies(){
-        if (_species.isEmpty()){return ("|VOID");}
+        if (_species.isEmpty()){return ("");}
         String s = new String();
         for (Species species: _species){
             s = s + "," + species.getKey();
-        }
-        return s.substring(1);
+        }   
+        return ("|" + s.substring(1));
     }
     public ArrayList<Species> getSpecies() {
         return _species;

@@ -1,5 +1,5 @@
 *** tests/tests_private/A-01-26-M-ok.out	2024-10-14 19:28:08.000000000 +0100
---- tests/tests_private/A-01-26-M-ok.outhyp	2024-10-25 05:53:56.471622123 +0100
+--- tests/tests_private/A-01-26-M-ok.outhyp	2024-10-25 07:48:26.393516792 +0100
 ***************
 *** 16,25 ****
   3 - Vacinar animal

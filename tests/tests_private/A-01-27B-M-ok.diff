@@ -1,5 +1,5 @@
 *** tests/tests_private/A-01-27B-M-ok.out	2024-10-14 19:28:08.000000000 +0100
---- tests/tests_private/A-01-27B-M-ok.outhyp	2024-10-25 05:53:56.521621285 +0100
+--- tests/tests_private/A-01-27B-M-ok.outhyp	2024-10-25 07:48:26.475517078 +0100
 ***************
 *** 10,16 ****
   9 - Gestão de vacinas
@@ -9,18 +9,17 @@
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
---- 10,17 ----
+--- 10,16 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair
-! Escolha uma opção: Ficheiro a abrir: Abrir ficheiro: Operação inválida: Problema ao abrir ficheiro: Erro a processar ficheiro ap01.dat
-! Menu Principal
+! Escolha uma opção: Ficheiro a abrir: Menu Principal
   1 - Criar ficheiro
   2 - Abrir ficheiro
   3 - Guardar ficheiro
 ***************
 *** 22,25 ****
---- 23,28 ----
+--- 22,27 ----
   9 - Gestão de vacinas
   10 - Consultas
   0 - Sair

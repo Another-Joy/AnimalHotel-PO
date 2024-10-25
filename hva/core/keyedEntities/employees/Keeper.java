@@ -14,14 +14,15 @@ public class Keeper extends Employee{
         _habitats = new ArrayList<Habitat>();
     }
 
+    @Override
     public String toString(){
-        return ("TRT|" + super.toString() + printResponsibilities());
+        return String.format("TRT|%s|%s",super.getKey(),super.getName(), printResponsibilities());
     }
 
 
 
     private String printResponsibilities(){
-        if (_habitats.isEmpty()){return ("|VOID");}
+        if (_habitats.isEmpty()){return ("");}
         String s = new String();
         for (Habitat habitat: _habitats){
             s = s + "," + habitat.getKey();
