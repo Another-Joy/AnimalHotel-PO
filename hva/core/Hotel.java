@@ -268,7 +268,7 @@ public class Hotel implements Serializable {
     }
     Habitat h = _habitats.get(habitat);
     if(!_species.containsKey(species)){
-      throw new UnknownHabitatException(species);
+      throw new UnknownSpeciesException(species);
     }
     Species s = _species.get(species);
     

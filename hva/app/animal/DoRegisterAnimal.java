@@ -28,7 +28,7 @@ class DoRegisterAnimal extends Command<Hotel> {
   @Override
   protected final void execute() throws CommandException{
     try{
-    _receiver.registerAnimal(stringField("id"), stringField("name"), stringField("idHabitat"),stringField("idSpecies"));
+    _receiver.registerAnimal(stringField("id"), stringField("name"),stringField("idSpecies"), stringField("idHabitat"));
   } catch (UnknownSpeciesException ex){
     throw new UnknownSpeciesKeyException(ex.getID());
   } catch (UnknownHabitatException ex){
