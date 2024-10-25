@@ -16,7 +16,7 @@ public class Keeper extends Employee{
 
     @Override
     public String toString(){
-        return String.format("TRT|%s|%s",super.getKey(),super.getName(), printResponsibilities());
+        return String.format("TRT|%s|%s%s",super.getKey(),super.getName(), printResponsibilities());
     }
 
 

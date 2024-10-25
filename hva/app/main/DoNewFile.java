@@ -16,6 +16,10 @@ class DoNewFile extends Command<HotelManager> {
 
   @Override
   protected final void execute() throws CommandException {
+    if(_receiver.getChangeState()){
+      Form.requestString(Prompt.saveBeforeExit());
+    }
     _receiver.newHotel();
+    _receiver.getHotel().setChanges(false);
   }
 }

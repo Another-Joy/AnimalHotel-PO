@@ -1,5 +1,5 @@
 *** tests/tests_final/A-01-33-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-01-33-M-ok.outhyp	2024-10-25 16:08:41.002411870 +0100
+--- tests/tests_final/A-01-33-M-ok.outhyp	2024-10-25 16:58:45.546384166 +0100
 ***************
 *** 19,29 ****
   6 - Mostrar árvores de habitat
@@ -14,20 +14,3 @@
   1 - Visualizar todos os habitats
   2 - Registar habitat
 --- 19,25 ----
-***************
-*** 51,57 ****
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: TRT|W2SO4|John Figueiredo|H1,H2
-  Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário
---- 47,53 ----
-  4 - Retirar responsabilidade
-  5 - Calcular satisfação de funcionário
-  0 - Sair
-! Escolha uma opção: TRT|W2SO4|John Figueiredo
-  Gestão de Funcionários
-  1 - Visualizar todos os funcionários
-  2 - Registar funcionário

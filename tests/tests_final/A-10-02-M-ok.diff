@@ -1,5 +1,5 @@
 *** tests/tests_final/A-10-02-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-10-02-M-ok.outhyp	2024-10-25 16:08:44.660400377 +0100
+--- tests/tests_final/A-10-02-M-ok.outhyp	2024-10-25 16:58:49.387373288 +0100
 ***************
 *** 16,22 ****
   3 - Transferir para habitat

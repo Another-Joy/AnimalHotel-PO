@@ -31,7 +31,7 @@ public class HotelManager implements Serializable {
    * @throws IOException if there is some error while serializing the state of the network to disk.
    **/
   public void save() throws FileNotFoundException, MissingFileAssociationException, IOException {
-    try {
+    
       // Create a file to save the serialized object
       FileOutputStream fileOut = new FileOutputStream(_filename);
       ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -41,10 +41,6 @@ public class HotelManager implements Serializable {
       out.close();
       fileOut.close();
 
-      // System.out.println("Serialized data is saved in person.ser");
-  } catch (IOException i) {
-      i.printStackTrace();
-  }
   }
   
   /**
@@ -59,7 +55,7 @@ public class HotelManager implements Serializable {
   public void saveAs(String filename) throws FileNotFoundException, MissingFileAssociationException, IOException {
     // FIXME implement serialization method
     _filename = filename;
-  save();
+    save();
   }
   
   /**

@@ -26,6 +26,7 @@ class DoSaveFile extends Command<HotelManager> {
         _receiver.saveAs(Form.requestString(Prompt.newSaveAs()));
       }
       _receiver.save();
+      _receiver.getHotel().setChanges(false);
 
      } catch (FileNotFoundException ex) {
       _display.popup(ex.getMessage());

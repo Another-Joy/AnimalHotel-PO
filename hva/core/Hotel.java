@@ -292,7 +292,8 @@ public class Hotel implements Serializable {
     for (String k: _trees.keySet()){
       if (_trees.get(k) == null) {
         // Handle the null case if needed, e.g., log a warning or continue.
-        throw new NullPointerException("Warning: Found a null tree in the collection: " + k);
+        System.out.println("found a null value from non/null key:" + k);
+        continue;
       }
       _trees.get(k).seasonalUpdate(_season);
     }
