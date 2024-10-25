@@ -16,6 +16,7 @@ public class Animal extends KeyedEntity{
         _vaccines = new ArrayList<VaccineRegistry>();
         _species = species;
         _habitat = habitat;
+        _habitat.addAnimal(this);
     }
 
     public String toString(){
@@ -23,7 +24,9 @@ public class Animal extends KeyedEntity{
     }
 
     public void changeHabitat(Habitat hab){
+        _habitat.removeAnimal(this);
         _habitat = hab;
+        _habitat.addAnimal(this);
     }
 
     public VaccineRegistry registerVaccine(Vet vet, Vaccine vac){

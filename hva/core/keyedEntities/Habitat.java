@@ -35,6 +35,13 @@ public class Habitat extends KeyedEntity {
         return res;
     }
 
+    public void addAnimal(Animal a){
+        _animals.add(a);
+    }
+    public void removeAnimal(Animal a){
+        _animals.remove(a);
+    }
+
 
     public void addTree(Tree t) {
         _trees.add(t);
