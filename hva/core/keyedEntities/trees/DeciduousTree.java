@@ -36,9 +36,9 @@ public class DeciduousTree extends Tree{
             case SUMMER:
                 return LeafState.WITH;
             case FALL:
-                return LeafState.WITH;
-            case WINTER:
                 return LeafState.DROP;
+            case WINTER:
+                return LeafState.NO;
         }
         return null;
     }

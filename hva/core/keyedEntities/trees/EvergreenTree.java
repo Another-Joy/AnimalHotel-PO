@@ -36,11 +36,12 @@ public class EvergreenTree extends Tree {
             case SUMMER:
                 return LeafState.WITH;
             case FALL:
-                return LeafState.DROP;
+                return LeafState.WITH;
             case WINTER:
-                return LeafState.NO;
+                return LeafState.DROP;
         }
         return null;
     }
+
 
 }

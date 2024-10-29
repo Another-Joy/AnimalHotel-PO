@@ -26,11 +26,12 @@ class DoAddTreeToHabitat extends Command<Hotel> {
   @Override
   protected void execute() throws CommandException {
     try{
-    _receiver.plantTree(stringField("hid"), stringField("tid"), stringField("name"), stringField("treeType"), integerField("age"), integerField("dificulty"));
+    _display.popup(_receiver.plantTree(stringField("hid"), stringField("tid"), stringField("name"), stringField("treeType"), integerField("age"), integerField("dificulty")));
     } catch (DuplicateKeyException ex) {
       throw new DuplicateTreeKeyException(ex.getID());
     } catch (UnknownHabitatException ex) {
       throw new UnknownHabitatKeyException(ex.getID());
     }
+
   }
 }

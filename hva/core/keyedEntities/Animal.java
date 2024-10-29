@@ -56,7 +56,7 @@ public class Animal extends KeyedEntity{
             else {res -= 2;}
         }
         res += _habitat.genericAnimalSatisfaction(this);
-        return res;
+        return res - 3;
     }
 
     private String printSaude(){

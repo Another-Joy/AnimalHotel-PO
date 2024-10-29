@@ -1,5 +1,5 @@
 *** tests/tests_final/A-11-08-M-ok.out	2024-10-20 12:31:15.000000000 +0100
---- tests/tests_final/A-11-08-M-ok.outhyp	2024-10-25 23:08:41.654330043 +0100
+--- tests/tests_final/A-11-08-M-ok.outhyp	2024-10-28 15:31:31.070580269 +0000
 ***************
 *** 27,47 ****
   3 - Transferir para habitat
@@ -27,21 +27,21 @@
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Identificador único do animal: 20
+! Escolha uma opção: Identificador único do animal: 37
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Identificador único do animal: 20
+! Escolha uma opção: Identificador único do animal: 37
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
   3 - Transferir para habitat
   4 - Calcular satisfação de animal
   0 - Sair
-! Escolha uma opção: Identificador único do animal: 20
+! Escolha uma opção: Identificador único do animal: 37
   Gestão de Animais
   1 - Visualizar todos os animais
   2 - Registar animal
